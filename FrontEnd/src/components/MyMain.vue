@@ -2,38 +2,14 @@
     <main>
         <div class="main-section">
             <div class="container">
+                
                 <div class="main-section-data">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 pd-left-none no-pd">
+                    <div class="col-lg-3 col-md-4 pd-left-none no-pd">
                             <div class="main-left-sidebar no-margin">
-                                <div class="user-data full-width">
-                                    <div class="user-profile">
-                                        <div class="username-dt">
-                                            <div class="usr-pic">
-                                                <img src="http://via.placeholder.com/100x100" alt="">
-                                            </div>
-                                        </div><!--username-dt end-->
-                                        <div class="user-specs">
-                                            <h3>John Doe</h3>
-                                            <span>Graphic Designer at Self Employed</span>
-                                        </div>
-                                    </div><!--user-profile end-->
-                                    <ul class="user-fw-status">
-                                        <li>
-                                            <h4>Following</h4>
-                                            <span>34</span>
-                                        </li>
-                                        <li>
-                                            <h4>Followers</h4>
-                                            <span>155</span>
-                                        </li>
-                                        <li>
-                                            <a href="user-profile.html" title="">View Profile</a>
-                                        </li>
-                                    </ul>
-                                </div><!--user-data end-->
+                                <gmn-header></gmn-header>
                             </div><!--main-left-sidebar end-->
                         </div>
+                        
                         <div class="col-lg-6 col-md-8 no-pd">
                             <div class="main-ws-sec">
                                 <div class="post-topbar">
@@ -102,15 +78,19 @@
                     </div>
                 </div><!-- main-section-data end-->
             </div> 
-        </div>
     </main>
 </template>
 <script>
+import GmnHeader from './GmnHeader';
 export default {
-    name: 'MyMain'
+    name: 'MyMain',
+    components:{
+        GmnHeader        
+    }
+    
 };
 </script>
 <style>
     /* @import url('../styles/main.css'); */
-    @import url('../styles/common.css');
+    /* @import url('../styles/common.css'); */
 </style> 

@@ -54,7 +54,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
-                                                    <button type="submit" value="submit">Sign in</button>
+                                                    <button @click="connect">Sign in</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -201,9 +201,16 @@ export default {
     store: store,
     components:{
 
+    },
+    methods:{
+        connect: function(event){
+            event.stopPropagation();
+            event.preventDefault(); 
+            window.location.href= "/";
+        }
     }
 };
 </script>
 <style>
-    @import url('../styles/common.css');
+    /* @import url('../styles/common.css'); */
 </style>

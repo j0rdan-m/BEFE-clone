@@ -1,217 +1,145 @@
-header {
-	float: left;
-	width: 100%;
-	background-color: orange;
-}
-.header-data {
-	float: left;
-	width: 100%;
-}
-.logo {
-	float: left;
-	width: 40px;
-	margin-right: 14px;
-	margin-top: 10px;
-}
-.search-bar {
-	float: left;
-	width: 280px;
-	margin-top: 9px;
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+
 }
 
-nav {
-	float: left;
-	width: 60%;
-	text-align: right;
-	padding-right: 13px;
-}
-nav ul li {
-	display: inline-block;
-	text-align: center;
-	padding: 13px 13px;
-	position: relative;
-}
-nav ul li:hover > ul {
-	opacity: 1;
-	visibility: visible;
-	z-index: 9999;
-}
-nav ul ul {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 200px;
-	background-color: orange;
-	text-align: left;
-	padding: 20px 0 10px 0; 
-	opacity: 0;
-	visibility: hidden;
-	z-index: 999999;
-}
-nav ul ul li {
-	padding: 0;
-	float: left;
-	width: 100%;
-	text-align: left;
-	margin-bottom: 15px;
-	padding: 0 20px;
-}
-nav ul ul li a:hover {
-	color: #fff;
-}
-nav ul ul li a {
-	font-size: 16px;
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
 }
 
-/* ============ Menu Btn =============*/
+body{
+    
+    margin-top: 50px;
+    display: flex;
+    height: 100px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffb457;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color var(--duration);
 
-.menu-btn {
-	float: right;
-	display: none;
 }
-.menu-btn a {
-	font-size: 24px;
-	color: #fff;
-	display: inline-block;
-	padding-top: 16px;
-	padding-left: 20px;
+
+.menu{
+
+    margin: 0;
+    display: flex;
+    /* Works well with 100% width  */
+    width: 2000px;
+    font-size: 1.5em;
+    padding: 0 2.85em;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColorMenu);
+    
+}
+
+.menu__item{
+    
+    all: unset;
+    flex-grow: 1;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    will-change: transform;
+    justify-content: center;
+    padding: 0.55em 0 0.85em;
+    transition: transform var(--timeOut , var(--duration));
+    
+}
+
+.menu__item::before{
+    
+    content: "";
+    z-index: -1;
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    transition: background-color var(--duration), transform var(--duration);
+    
 }
 
 
-.user-account {
-	float: right;
-	width: 110px;
-	border-left: 1px solid #dd3e2b;
-	border-right: 1px solid #dd3e2b;
-	box-sizing: border-box;
-	position: relative;
-}
-.user-info {
-	float: left;
-	width: 100%;
-	padding: 13px 10px;
-	position: relative;
-}
-.user-account-settingss {
-	position: absolute;
-	top: 100%;
-	right: 0;
-	width: 240px;
-	background-color: #fff;
-	border-left: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	border-right: 1px solid #e5e5e5;
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-ms-border-radius: 0 0 5px 5px;
-	-o-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
-	-webkit-box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.24);
-	-moz-box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.24);
-	-ms-box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.24);
-	-o-box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.24);
-	box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.24);
-	opacity: 0;
-	visibility: hidden;
-}
-.user-account-settingss.active {
-	opacity: 1;
-	visibility: visible;
-	z-index: 9999;
-}
-.user-account-settingss > h3 {
-	color: #000000;
-	font-size: 16px;
-	font-weight: 600;
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid #e5e5e5;
-	padding: 15px 20px;
-}
-.on-off-status {
-	float: left;
-	width: 100%;
-	padding: 20px;
-	border-bottom: 1px solid #e5e5e5;
-}
-.on-off-status li {
-	float: left;
-	width: 100%;
-	margin-bottom: 15px;
-}
-.on-off-status li:last-child {
-	margin-bottom: 0;
-}
-.on-off-status li .fgt-sec small {
-	color: #686868;
+.menu__item.active {
+
+    transform: translate3d(0, -.8em , 0);
+
 }
 
-/* =========== search_form =========== */
+.menu__item.active::before{
+    
+    transform: scale(1);
+    background-color: var(--bgColorItem);
 
-.search_form {
-	float: left;
-	width: 100%;
-	padding: 20px;
-	border-bottom: 1px solid #e5e5e5;
 }
-.search_form form {
-	float: left;
-	width: 100%;
-	position: relative;
+
+.icon{
+    
+    width: 2.6em;
+    height: 2.6em;
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    
 }
-.search_form form input {
-	width: 100%;
-	height: 35px;
-	padding: 0 15px;
-	border: 1px solid #e5e5e5;
-	background-color: #f2f2f2;
+
+.menu__item.active .icon {
+
+    animation: strok 1.5s reverse;
+    
 }
-.search_form form button {
-	color: #f2f2f2;
-	font-size: 14px;
-	background-color: orange;
-	padding: 0 10px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	border: 0;
-	font-weight: 600;
-	-webkit-border-radius: 0 3px 3px 0;
-	-moz-border-radius: 0 3px 3px 0;
-	-ms-border-radius: 0 3px 3px 0;
-	-o-border-radius: 0 3px 3px 0;
-	border-radius: 0 3px 3px 0;
-	cursor: pointer;
+
+@keyframes strok {
+
+    100% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+}
+
+.menu__border{
+
+    left: 0;
+    bottom: 99%;
+    width: 10.9em;
+    height: 2.4em;
+    position: absolute;
+    clip-path: url(#menu);
+    will-change: transform;
+    background-color: var(--bgColorMenu);
+    transition: transform var(--timeOut , var(--duration));
+    
+}
+
+.svg-container {
+
+    width: 0;
+    height: 0;
 }
 
 
-/* ============ us-links ============= */
-
-.us-links {
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid #e5e5e5;
-	padding: 20px;
-}
-.us-links li {
-	float: left;
-	width: 100%;
-	margin-bottom: 15px;
-}
-.us-links li:last-child {
-	margin-bottom: 0;
-}
-.us-links li a {
-	float: left;
-	width: 100%;
-	color: #000000;
-	font-size: 14px;
-	font-weight: 600;
-}
-.tc {
-	text-align: center;
-}
-.tc a {
-	color: #000;
+@media screen and (max-width: 50em) {
+    .menu{
+        font-size: .8em;
+    }
 }

@@ -391,5 +391,5 @@ export default {
 </script>
 <style>
     /* @import url('../styles/main.css'); */
-    @import url('../styles/common.css');
+    /* @import url('../styles/common.css'); */
 </style> 

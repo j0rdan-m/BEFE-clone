@@ -25,5 +25,5 @@ export default {
 </script>
 <style>
     @import url('../styles/footer.css');
-    @import url('../styles/common.css');
+    /* @import url('../styles/common.css'); */
 </style> 

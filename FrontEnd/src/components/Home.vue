@@ -1,27 +1,30 @@
 <template>
-    <div>
-        <my-header></my-header>
-        <my-main></my-main>
-        <my-footer></my-footer>
+    <div class="page">
+        <gmn-header></gmn-header> 
+        <br>  
+        <gmn-main></gmn-main>
+        <br>
+        <!-- <gmn-footer></gmn-footer> -->
     </div>
 </template>
 <script>
 import Vue from 'vue';
 import store from './UsersStore';
-import MyHeader from '@/components/MyHeader';
-import MyMain from '@/components/MyMain';
-import MyFooter from '@/components/MyFooter';
-
+import GmnHeader from '@/components/GmnHeader';
+import GmnMain from '@/components/GmnMain';
+import GmnFooter from '@/components/GmnFooter';
 
 export default {
     store: store,
     components:{
-        MyHeader,
-        MyMain,
-        MyFooter
+        GmnHeader,
+        GmnMain,
+        // GmnFooter
     }
 };
 </script>
 <style>
-    
+    .page{
+        margin-top: 200px;    
+    };
 </style>

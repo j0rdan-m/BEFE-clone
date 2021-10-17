@@ -10,7 +10,7 @@
                     <div class="search-bar">
                         <form>
                             <input type="text" name="search" placeholder="Search...">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <button type="submit"><i class="material-icons-outlined">search</i></button>
                         </form>
                     </div><!--search-bar end-->
                         <nav>
@@ -34,7 +34,7 @@
                                 <a href="#" title=""> {{ username }} </a>
                                 <i class="fa fa-sort-down"></i>
                             </div>
-                            <div class="user-account-settingss">
+                            <div class="user-account-settingss" id="user-account-settings">
                                 <h3>Online Status</h3>
                                 <ul class="on-off-status">
                                     <li>
@@ -70,7 +70,7 @@
                                     <li><a href="#" title="">Faqs</a></li>
                                     <li><a href="#" title="">Terms & Conditions</a></li>
                                 </ul>
-                                <h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+                                <h3 class="tc"><a href="signup" title="">Logout</a></h3>
                             </div><!--user-account-settingss end-->
                         </div>
                 </div><!--header-data end-->
@@ -88,15 +88,17 @@ export default {
         };
     },
     methods:{
-        activateSettings: function (){
-            document.querySelector(".user-account-settingss").classList.toggle("active");
+        activateSettings: function (event){
+            event.stopPropagation();
+            event.preventDefault(); 
+            document.querySelector("#user-account-settings").classList.toggle("active");
             console.log("OK");
         }
     }
 };
 </script>
 <style>
-    @import url('../styles/common.css');
+    /* @import url('../styles/common.css'); */
     @import url('../styles/header.css');
  
 </style>
