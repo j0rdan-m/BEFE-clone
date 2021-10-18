@@ -4,20 +4,20 @@
             <div class="form-container sign-up-container">
                 <form action="#">
                     <h1>Create Account</h1>
-                    <input type="text" placeholder="First Name" />
-                    <input type="text" placeholder="Last Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
+                    <input v-model="futur_user_firstname" type="text" placeholder="First Name" />
+                    <input v-model="futur_user_lastname" type="text" placeholder="Last Name" />
+                    <input v-model="futur_user_email" type="email" placeholder="Email" />
+                    <input v-model="futur_user_password" type="password" placeholder="Password" />
+                    <button @click="subscribe">Sign Up</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
                 <form action="#">
                     <h1>Sign in</h1>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input v-model="user_email" type="email" placeholder="Email" />
+                    <input v-model="user_password" type="password" placeholder="Password" />
                     <a href="#">Forgot your password?</a>
-                    <button>Sign In</button>
+                    <button @click="connect">Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -42,17 +42,64 @@
 <script>
 
 import Vue from 'vue';
+import Axios from 'axios';
 import store from './UsersStore';
 import initaccess from '../js/gmnaccess';
 
 export default {
-    name: "GmnSignup",
+    name: "GmnAccess",
     store: store,
     components:{
 
     },
+    data () {
+        return {
+            user_email: this.user_email,
+            user_password: this.user_password,
+            futur_user_firstname: this.futur_user_firstname,
+            futur_user_lastname: this.futur_user_lastname,
+            futur_user_email: this.futur_user_email,
+            futur_user_password: this.futur_user_password
+        };
+    },
     mounted(){
         initaccess();   
+    },
+    methods:{
+        connect: function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            console.log('connect as ' + this.user_email);
+            const auth = { email: this.user_email, password: this.user_password };
+            Axios.post('http://localhost:3000/api/auth/login', auth)
+                .then(response => {
+                    sessionStorage.setItem('token', response.data.token);
+                    window.location.href= "/";
+                }
+                )
+                .catch(error => {
+                    console.error('There was an error!', error);
+                    this.user_email = this.futur_user_email;
+                }); 
+            
+        },
+        subscribe: function(event) {
+            event.stopPropagation();
+            event.preventDefault(); 
+            console.log("subscribe for " + this.futur_user_firstname);   
+            const auth = { email: this.futur_user_email, password: this.futur_user_password };
+            Axios.post('http://localhost:3000/api/auth/signup', auth)
+                .then(response => {
+                    this.user_email = this.futur_user_email;
+                    initaccess();
+                }
+                )
+                .catch(error => {
+                    console.error('There was an error!', error);
+                    this.user_email = this.futur_user_email;
+                    initaccess();
+                });         
+        }
     }
 };
 </script>

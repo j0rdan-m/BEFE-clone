@@ -201,13 +201,6 @@ export default {
     store: store,
     components:{
 
-    },
-    methods:{
-        connect: function(event){
-            event.stopPropagation();
-            event.preventDefault(); 
-            window.location.href= "/";
-        }
     }
 };
 </script>

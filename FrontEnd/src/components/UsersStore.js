@@ -16,7 +16,7 @@ const state = {
 };
 
 const mutations = {
-    ADD_FOLLOWING: (state) => {
+    ADD_USER: (state) => {
         state.user.following++;
     },
     SET_SAUCES: (state, sauces) => {
@@ -28,17 +28,21 @@ const getters = {
     user_firstname: state => state.user.firstname,
     user_lastname: state => state.user.lastname,
     user_job: state => state.user.job,
-    sauces: state => state.user.sauces
+    sauces: state => state.user.sauces,
+    isAuthenticated: function () {
+        return sessionStorage.getItem("token") ? true : false;
+    }
 };
 
 const actions = {
     setSauces({ commit }) {
         axios.get('http://localhost:3000/api/sauces')
             .then(response => {
-                console.log('data', response.data);
                 commit('SET_SAUCES', response.data); 
             });
-    }
+    },
+
+
 };
 
 let store =  new Vuex.Store({

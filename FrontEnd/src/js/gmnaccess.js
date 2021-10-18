@@ -1,17 +1,25 @@
-let signUpButton;
-let signInButton;
-let container;
 
 export default function initsignup () {
-    signUpButton = document.getElementById('signUp');
-    signInButton = document.getElementById('signIn');
-    container = document.getElementById('container');
+    let signUpButton = document.getElementById('signUp');
+    let signInButton = document.getElementById('signIn');
+
+    switchOnSignIn();
 
     signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active");
+        switchOnSignUp();
     });
 
     signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active");
+        switchOnSignIn();
     });
+}
+
+function switchOnSignUp() {
+    let container = document.getElementById('container');
+    container.classList.add("right-panel-active");
+}
+
+function switchOnSignIn() {
+    let container = document.getElementById('container');
+    container.classList.remove("right-panel-active");
 }
