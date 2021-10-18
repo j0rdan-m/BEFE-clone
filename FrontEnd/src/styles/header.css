@@ -12,12 +12,12 @@ html *::after {
           box-sizing: inherit;
 }
 
-body {
-  margin-top: 50px;
+.body-header {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
+  height: 200px;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -25,7 +25,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffb457;
+  background-color: var(--bgColorItem);
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: background-color var(--duration);
   transition: background-color var(--duration);

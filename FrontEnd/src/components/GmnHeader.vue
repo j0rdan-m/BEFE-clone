@@ -1,4 +1,5 @@
 <template>
+<body class="body-header">
     <menu class="menu">
         <button class="menu__item active" style="--bgColorItem: #ff8c00;" >
             <svg class="icon" viewBox="0 0 24 24">
@@ -48,7 +49,7 @@
             </svg>
         </div>
     </menu>
-
+</body>
 
 
 </template>

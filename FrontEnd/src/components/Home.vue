@@ -1,17 +1,20 @@
 <template>
-    <div class="page">
-        <gmn-header></gmn-header> 
-        <br>  
+<body class="page">
+    <div>
+        <gmn-header></gmn-header>  
         <gmn-main></gmn-main>
         <br>
-        <!-- <gmn-footer></gmn-footer> -->
+        <gmn-post></gmn-post>
+        <gmn-footer></gmn-footer>
     </div>
+</body>
 </template>
 <script>
 import Vue from 'vue';
 import store from './UsersStore';
 import GmnHeader from '@/components/GmnHeader';
 import GmnMain from '@/components/GmnMain';
+import GmnPost from '@/components/GmnPost';
 import GmnFooter from '@/components/GmnFooter';
 
 export default {
@@ -19,12 +22,16 @@ export default {
     components:{
         GmnHeader,
         GmnMain,
-        // GmnFooter
+        GmnPost,
+        GmnFooter
     }
 };
 </script>
 <style>
+
     .page{
-        margin-top: 200px;    
+        margin: 0;
+        padding: 0;
     };
+
 </style>

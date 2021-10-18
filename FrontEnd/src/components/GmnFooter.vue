@@ -44,7 +44,9 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
     footer{
-        margin-bottom: 50px;
+        margin: 0;
+        background: linear-gradient(#243b55);
     }
 </style>

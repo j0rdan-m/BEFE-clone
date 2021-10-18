@@ -33,7 +33,7 @@ function clickItem(item, index,) {
         window.location.href="#";
         break;
     case 3:
-        window.location.href="#";
+        window.location.href="/profile";
         break;
     case 4:
         window.location.href="/access";

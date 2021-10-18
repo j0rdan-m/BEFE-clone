@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+
+}
+
+.text-style{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.body-post{
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    // background-color: var(--bgColorItem);
+    // transition: background-color var(--duration);
+}
+
+main{
+    background: linear-gradient(#ffb457, #243b55);
+
+}
+
+.card{
+    background: linear-gradient(#ffb457, #243b55);
+}
+
+.edit-button{
+    width: 50px;
+    padding: 10px;
+    background-color: var(--bgColorItem);
+    // color: #243b55;
+}
