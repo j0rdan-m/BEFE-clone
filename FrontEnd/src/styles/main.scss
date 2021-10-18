@@ -1,0 +1,28 @@
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+
+}
+
+body{
+    min-height: 500px;
+    background-color: var(--bgColorItem);
+    transition: background-color var(--duration);
+}
+
+#main{
+    background-color: var(--bgColorItem);
+    transition: background-color var(--duration);
+    
+}
+
+#card{
+    background: linear-gradient(#ffb457, #243b55);
+    
+}
+
+#text{
+    color: white;
+}

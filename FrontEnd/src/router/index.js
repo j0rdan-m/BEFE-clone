@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/Home';
-import GmnSignup from '@/components/GmnSignup';
+import GmnAccess from '@/components/GmnAccess';
 import Sauces from '@/components/Sauces';
 
 Vue.use(Router);
@@ -20,9 +20,9 @@ export default new Router({
             component: Sauces
         },
         {
-            path: '/signup',
-            name: 'GmnSignup',
-            component: GmnSignup
+            path: '/access',
+            name: 'GmnAccess',
+            component: GmnAccess
         }
     ]
 });

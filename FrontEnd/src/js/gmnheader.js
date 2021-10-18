@@ -22,6 +22,23 @@ function clickItem(item, index,) {
     activeItem = item;
     offsetMenuBorder(activeItem, menuBorder);
     
+    switch (index) {
+    case 0:
+        window.location.href="#";
+        break;
+    case 1:
+        window.location.href="#";
+        break;
+    case 2:
+        window.location.href="#";
+        break;
+    case 3:
+        window.location.href="#";
+        break;
+    case 4:
+        window.location.href="/access";
+        break;
+    }
     
 }
 
@@ -46,7 +63,6 @@ export default function initheader () {
     menuItems.forEach((item, index) => {
 
         item.addEventListener("click", () => clickItem(item, index));
-        
     });
 
     window.addEventListener("resize", () => {
