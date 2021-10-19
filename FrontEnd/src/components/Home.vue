@@ -29,17 +29,5 @@ export default {
 };
 </script>
 <style>
-    .home_main{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-    }
-    .page{
-        margin: 0;
-        padding: 0;
-    };
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
+    @import url('../styles/home.css');
 </style>

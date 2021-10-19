@@ -1,29 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 .text-style {
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: #243b55;
+}
+
+.icon-style {
+  color: #243b55;
 }
 
 .body-post {
   margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 
+.body-post :hover .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#243b55));
+  background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
+  border: white;
+}
+
+.body-post :hover .text-style {
+  color: white;
+}
+
+.body-post :hover .icon-style {
+  color: white;
+}
+
 .post {
   background-color: rgba(0, 0, 0, 0);
+  border: #243b55;
 }
 
 .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#243b55));
-  background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
+  background: white;
+}
+
+.card :hover {
+  border: #243b55;
 }
 
 .edit-button {
   width: 50px;
   padding: 10px;
-  background-color: var(--bgColorItem);
+  background-color: rgba(0, 0, 0, 0);
 }
 /*# sourceMappingURL=post.css.map */

@@ -24,16 +24,16 @@ function clickItem(item, index,) {
     
     switch (index) {
     case 0:
-        window.location.href="#";
+        window.location.href="/";
         break;
     case 1:
-        window.location.href="#";
+        window.location.href="/posts";
         break;
     case 2:
-        window.location.href="#";
+        window.location.href="/profile";
         break;
     case 3:
-        window.location.href="/profile";
+        window.location.href="#";
         break;
     case 4:
         sessionStorage.removeItem('token');

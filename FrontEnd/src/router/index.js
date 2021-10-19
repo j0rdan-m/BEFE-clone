@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import GmnAccess from '@/components/GmnAccess';
 import GmnProfile from '@/components/GmnProfile';
+import GmnPosts from '@/components/GmnPosts';
 import Sauces from '@/components/Sauces';
 import store from '@/components/UsersStore';
 
@@ -49,6 +50,12 @@ export default new Router({
             name: 'GmnProfile',
             beforeEnter: ifAuthenticated,
             component: GmnProfile
+        },
+        {
+            path: '/posts',
+            name: 'GmnPosts',
+            beforeEnter: ifAuthenticated,
+            component: GmnPosts
         },
     ]
 });

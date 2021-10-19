@@ -151,6 +151,11 @@ html *::after {
   height: 0;
 }
 
+.header-icons {
+  color: white;
+  font-size: 50px;
+}
+
 @media screen and (max-width: 50em) {
   .menu {
     font-size: .8em;

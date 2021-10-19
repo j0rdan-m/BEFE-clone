@@ -2,29 +2,53 @@
 
 .text-style{
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: #243b55;
+}
+
+.icon-style{
+    color: #243b55;
 }
 
 .body-post{
     margin: 0;
+    padding: 0;
     display: flex;
     overflow: hidden;
-    // background-color: var(--bgColorItem);
-    // transition: background-color var(--duration);
+    // background: linear-gradient(rgba(0, 0, 0, 0), white);
+    :hover{
+        .card{
+            background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
+            border: white;
+        }
+        .text-style{
+            color: white;
+        }
+        .icon-style{
+            color: white;
+        }
+    }
 }
 
 .post{
     background-color: rgba(0,0,0,0);
+    border: #243b55;
+
+
 }
 
 .card{
-    background: linear-gradient(rgba(0,0,0,0), #243b55);
+    background: white;
+    :hover{
+        border:#243b55;
+    }
+    
 
 }
+
 
 .edit-button{
     width: 50px;
     padding: 10px;
-    background-color: var(--bgColorItem);
+    background-color: rgba(0,0,0,0);
     // color: #243b55;
 }

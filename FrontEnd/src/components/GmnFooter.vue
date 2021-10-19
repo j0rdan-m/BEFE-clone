@@ -12,11 +12,7 @@
                 </svg>
             </div>
             <div class="text-black flex flex-col md:items-center f-f-l pt-3">
-                <h1 class="text-2xl font-black">Build. Review. Ship.</h1>
-                <div class="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
-                    <h2 class="md:mr-6 pb-4 md:py-0 cursor-pointer">Download Now</h2>
-                    <h2 class="cursor-pointer">License</h2>
-                </div>
+                <h1 class="text-2xl font-black">Share. Comment. Enjoy.</h1>
                 <div class="my-6 text-base text-color f-f-l">
                     <ul class="md:flex items-center">
                         <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">About</li>
