@@ -1,7 +1,7 @@
 <template>
 <body class="body-header">
     <menu class="menu">
-        <button class="menu__item active" style="--bgColorItem: #ff8c00;" >
+        <button class="menu__item" style="--bgColorItem: #ff8c00;" >
             <span class="material-icons-outlined header-icons">
             menu
             </span>
@@ -52,8 +52,9 @@ import initheader from '../js/gmnheader';
 
 export default {
     name: "GmnHeader",
+    props: ['header_index'],
     mounted(){
-        initheader();   
+        initheader(this.header_index);   
     }
     
 };

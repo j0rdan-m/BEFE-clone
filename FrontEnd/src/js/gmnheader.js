@@ -7,8 +7,8 @@ let activeItem;
 
 
 function clickItem(item, index,) {
-
     menu.style.removeProperty("--timeOut");
+    menuBorder.style.transitionDuration="300ms";
     
     if (activeItem === item) return;
     
@@ -51,18 +51,25 @@ function offsetMenuBorder(element, menuBorder) {
 
 }
 
-export default function initheader () {
+export default function initheader (index_header) {
+    let idx_hdr = parseInt(index_header);
+    console.log(index_header);
     body = document.body;
     bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
+    body.style.backgroundColor = bgColorsBody[idx_hdr];
     menu = body.querySelector(".menu");
     menuItems = menu.querySelectorAll(".menu__item");
     menuBorder = menu.querySelector(".menu__border");
-    activeItem = menu.querySelector(".active");
 
+    menuBorder.style.transitionDuration="0ms";
+    menuItems[idx_hdr].classList.add("active");
+    body.style.backgroundColor = bgColorsBody[idx_hdr];
+    activeItem = menuItems[idx_hdr];
     offsetMenuBorder(activeItem, menuBorder);
 
-    menuItems.forEach((item, index) => {
 
+
+    menuItems.forEach((item, index) => {
         item.addEventListener("click", () => clickItem(item, index));
     });
 
@@ -70,4 +77,6 @@ export default function initheader () {
         offsetMenuBorder(activeItem, menuBorder);
         menu.style.setProperty("--timeOut", "none");
     });
+    
+    
 } 

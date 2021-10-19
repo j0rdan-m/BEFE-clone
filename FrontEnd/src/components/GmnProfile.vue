@@ -3,7 +3,7 @@
 
     <div class="bg-gray-100">
         <!-- Start of Header -->
-        <gmn-header></gmn-header>
+        <gmn-header v-bind:header_index="2"></gmn-header>
         <!-- End of Header -->
 
         <div class="container mx-auto my-5 p-5">
