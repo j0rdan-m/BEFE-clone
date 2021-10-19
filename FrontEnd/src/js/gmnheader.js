@@ -36,6 +36,7 @@ function clickItem(item, index,) {
         window.location.href="/profile";
         break;
     case 4:
+        sessionStorage.removeItem('token');
         window.location.href="/access";
         break;
     }
