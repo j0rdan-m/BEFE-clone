@@ -34,10 +34,7 @@
 import initheader from '../js/gmnheader';
 
 export default {
-    name: "GmnHeader",
-    mounted(){
-        initheader();   
-    }
+    name: "GmnMain"
 };
     
 </script>

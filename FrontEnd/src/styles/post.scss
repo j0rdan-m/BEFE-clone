@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-html {
-
-    box-sizing: border-box;
-    --bgColorMenu : #1d1d27;
-    --duration: .7s;    
-
-}
-
 .text-style{
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -21,13 +13,13 @@ html {
     // transition: background-color var(--duration);
 }
 
-main{
-    background: linear-gradient(#ffb457, #243b55);
-
+.post{
+    background-color: rgba(0,0,0,0);
 }
 
 .card{
-    background: linear-gradient(#ffb457, #243b55);
+    background: linear-gradient(rgba(0,0,0,0), #243b55);
+
 }
 
 .edit-button{

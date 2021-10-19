@@ -1,6 +1,6 @@
 <template>
 <body class="body-post">
-    <main class="h-full w-full bg-gray-50 flex items-center justify-center">
+    <div class="post h-full w-full bg-gray-50 flex items-center justify-center">
         <div class="border max-w-screen-md bg-white mt-6 rounded-2xl p-4 card">
             <div class="flex items-center	justify-between">
                 <div class="gap-3.5	flex items-center ">
@@ -98,7 +98,7 @@
                     </div> -->
                 </div>
         </div>
-    </main>
+    </div>
 </body>
 </template>
 
@@ -106,10 +106,7 @@
 import initheader from '../js/gmnheader';
 
 export default {
-    name: "GmnHeader",
-    mounted(){
-        initheader();   
-    }
+    name: "GmnPost"
 };
 </script>
 

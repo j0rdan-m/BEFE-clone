@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-html {
-
-    box-sizing: border-box;
-    --bgColorMenu : #1d1d27;
-    --duration: .7s;    
-
-}
-
-.body-main{
-    margin: 0;
-    // min-height: 200px;
-    background-color: var(--bgColorItem);
-    transition: background-color var(--duration);
-}
 
 #main{
     background-color: var(--bgColorItem);
@@ -21,7 +7,7 @@ html {
 }
 
 #card{
-    background: linear-gradient(#ffb457, #243b55);
+    background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
     // background: linear-gradient(var(--bgColorMenu), var(--bgColorItem));
 }
 

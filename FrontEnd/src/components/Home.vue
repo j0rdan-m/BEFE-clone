@@ -2,9 +2,10 @@
 <body class="page">
     <div>
         <gmn-header></gmn-header>  
-        <gmn-main></gmn-main>
-        <br>
-        <gmn-post></gmn-post>
+        <div class="home_main">
+            <div class="aside"><gmn-main></gmn-main></div>
+            <div class="content"><gmn-posts></gmn-posts></div>
+        </div>
         <gmn-footer></gmn-footer>
     </div>
 </body>
@@ -14,7 +15,7 @@ import Vue from 'vue';
 import store from './UsersStore';
 import GmnHeader from '@/components/GmnHeader';
 import GmnMain from '@/components/GmnMain';
-import GmnPost from '@/components/GmnPost';
+import GmnPosts from '@/components/GmnPosts';
 import GmnFooter from '@/components/GmnFooter';
 
 export default {
@@ -22,16 +23,23 @@ export default {
     components:{
         GmnHeader,
         GmnMain,
-        GmnPost,
+        GmnPosts,
         GmnFooter
     }
 };
 </script>
 <style>
-
+    .home_main{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
     .page{
         margin: 0;
         padding: 0;
     };
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
 </style>

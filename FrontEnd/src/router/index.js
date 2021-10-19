@@ -47,8 +47,8 @@ export default new Router({
         {
             path: '/profile',
             name: 'GmnProfile',
-            beforeEnter: ifNotAuthenticated,
-            component: GmnAccess
+            beforeEnter: ifAuthenticated,
+            component: GmnProfile
         },
     ]
 });
