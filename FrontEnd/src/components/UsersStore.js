@@ -34,8 +34,10 @@ const mutations = {
 const getters = {
     user_firstname: state => state.user.firstname,
     user_lastname: state => state.user.lastname,
+    user_description: state => state.user.description,
     user_job: state => state.user.job,
     sauces: state => state.user.sauces,
+    user_avatarURL: state => state.user.avatarURL,
     isAuthenticated: function () {
         return sessionStorage.getItem("token") ? true : false;
     }
