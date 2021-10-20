@@ -18,8 +18,7 @@
             <div class="mt-5 flex gap-2	 justify-center border-b pb-4 flex-wrap	">
                 <img src="https://images.unsplash.com/photo-1610147323479-a7fb11ffd5dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" class="bg-red-500 rounded-2xl w-1/3 object-cover h-96 flex-auto" alt="photo">
                 <img src="https://images.unsplash.com/photo-1614914135224-925593607248?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" class="bg-red-500 rounded-2xl w-1/3 object-cover h-96 flex-auto" alt="photo">
-                <img src="https://images.unsplash.com/photo-1610147323479-a7fb11ffd5dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" class="bg-red-500 rounded-2xl w-1/3 object-cover h-96 flex-auto" alt="photo">
-
+                
             </div >
             <div class="interactions rounded-2xl">
                 <div class=" h-16 border-b  flex items-center justify-around">
@@ -29,7 +28,11 @@
                         </span>
                         <div class="text-sm	text-style text-style">10 Comments</div>
                     </div>
-                    <div class="flex items-center	gap-3">card_body
+                    <div class="flex items-center	gap-3">
+                        <span class="material-icons-outlined icon-style">
+                            favorite
+                        </span>
+                        <div class="text-sm text-style text-style">5 Likes</div>
                         <span class="material-icons-outlined icon-style">
                             favorite_border
                         </span>

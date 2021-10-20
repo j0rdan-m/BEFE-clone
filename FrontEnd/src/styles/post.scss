@@ -34,6 +34,7 @@
 }
 
 .card{
+    min-width: 70%;
     background: linear-gradient(white, white, #243b55);
     &:hover{
         border:#243b55 solid 1px;
