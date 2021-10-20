@@ -53,7 +53,6 @@ function offsetMenuBorder(element, menuBorder) {
 
 export default function initheader (index_header) {
     let idx_hdr = parseInt(index_header);
-    console.log(index_header);
     body = document.body;
     bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
     body.style.backgroundColor = bgColorsBody[idx_hdr];
