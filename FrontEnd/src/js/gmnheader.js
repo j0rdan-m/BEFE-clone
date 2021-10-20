@@ -33,7 +33,7 @@ function clickItem(item, index,) {
         window.location.href="/profile";
         break;
     case 3:
-        window.location.href="#";
+        window.location.href="/settings";
         break;
     case 4:
         sessionStorage.removeItem('token');
@@ -54,7 +54,7 @@ function offsetMenuBorder(element, menuBorder) {
 export default function initheader (index_header) {
     let idx_hdr = parseInt(index_header);
     body = document.body;
-    bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
+    bgColorsBody = ["#ffb457", "#65ddb7", "#9999fb", "#ffe797", "#1d1d27"];
     body.style.backgroundColor = bgColorsBody[idx_hdr];
     menu = body.querySelector(".menu");
     menuItems = menu.querySelectorAll(".menu__item");

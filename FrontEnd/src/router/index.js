@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import GmnAccess from '@/components/GmnAccess';
 import GmnProfile from '@/components/GmnProfile';
 import GmnPostPage from '@/components/GmnPostPage';
+import GmnSettings from '@/components/GmnSettings';
 import Sauces from '@/components/Sauces';
 import store from '@/components/UsersStore';
 
@@ -56,6 +57,12 @@ export default new Router({
             name: 'GmnPostPage',
             beforeEnter: ifAuthenticated,
             component: GmnPostPage
+        },
+        {
+            path: '/settings',
+            name: 'GmnSettings',
+            beforeEnter: ifAuthenticated,
+            component: GmnSettings
         }
     ]
 });

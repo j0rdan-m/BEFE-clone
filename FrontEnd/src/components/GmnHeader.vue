@@ -3,20 +3,20 @@
     <menu class="menu">
         <button class="menu__item" style="--bgColorItem: #ff8c00;" >
             <span class="material-icons-outlined header-icons">
-            menu
+            home
             </span>
         </button>
 
-        <button class="menu__item" style="--bgColorItem: #f54888;">
+        <button class="menu__item" style="--bgColorItem: #65ddb7;">
             <span class="material-icons-outlined header-icons">
-            feed
+            post_add
             </span>
         </button>
 
         <button class="menu__item" style="--bgColorItem: #4343f5;" >
-            <i  class="material-icons-outlined header-icons">
-                account_circle
-            </i> 
+            <span class="material-icons-outlined header-icons">
+            account_circle
+            </span>
         </button>
 
         <button class="menu__item" style="--bgColorItem: #e0b115;" > 
@@ -25,7 +25,7 @@
             </span>          
         </button>
 
-        <button class="menu__item" style="--bgColorItem:#65ddb7;">
+        <button class="menu__item" style="--bgColorItem:#1d1d27;">
             <span class="material-icons-outlined header-icons">
             logout
             </span>
