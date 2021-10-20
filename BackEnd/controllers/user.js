@@ -42,7 +42,10 @@ exports.signup = (req, res, next) => {
           email: req.body.email,
           password: hash,
           firstname: req.body.firstname,
-          lastname: req.body.lastname
+          lastname: req.body.lastname,
+          avatarURL:"https://avatars.githubusercontent.com/u/67946056?v=4",
+          description: "",
+          job:""
         });
         user.save().then(
           () => {
@@ -60,6 +63,34 @@ exports.signup = (req, res, next) => {
       }
     );
   };
+
+
+//Update
+exports.update = (req, res, next) => {
+      User.findOne({
+        _id: req.params.id
+      }).then(
+        (user) => {
+            user.firstname = req.body.firstname;
+            user.lastname = req.body.lastname;
+            user.description = req.body.description;
+            user.job = req.body.job;
+            user.avatarUrl = req.body.avatarUrl;
+            user.save().then(
+              () => {
+                res.status(201).json({
+                  message: 'User modified successfully!'
+                });
+              }
+            ).catch(
+              (error) => {
+                res.status(500).json({
+                  error: error
+                });
+              }
+            )
+            });
+      };
 
 //LOGIN
   exports.login = (req, res, next) => {

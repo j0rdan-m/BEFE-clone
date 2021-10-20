@@ -8,7 +8,12 @@ let activeItem;
 
 function clickItem(item, index,) {
     menu.style.removeProperty("--timeOut");
-    menuBorder.style.transitionDuration="300ms";
+    if (parseInt(index)===4){
+        menuBorder.style.transitionDuration="3000ms";
+    }else{
+        menuBorder.style.transitionDuration="300ms";
+    }
+    
     
     if (activeItem === item) return;
     
@@ -54,7 +59,7 @@ function offsetMenuBorder(element, menuBorder) {
 export default function initheader (index_header) {
     let idx_hdr = parseInt(index_header);
     body = document.body;
-    bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
+    bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#1d1d27"];
     body.style.backgroundColor = bgColorsBody[idx_hdr];
     menu = body.querySelector(".menu");
     menuItems = menu.querySelectorAll(".menu__item");
