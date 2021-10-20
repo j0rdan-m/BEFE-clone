@@ -8,7 +8,12 @@ let activeItem;
 
 function clickItem(item, index,) {
     menu.style.removeProperty("--timeOut");
-    menuBorder.style.transitionDuration="300ms";
+    if (parseInt(index)===4){
+        menuBorder.style.transitionDuration="3000ms";
+    }else{
+        menuBorder.style.transitionDuration="300ms";
+    }
+    
     
     if (activeItem === item) return;
     

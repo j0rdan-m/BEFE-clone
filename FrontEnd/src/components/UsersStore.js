@@ -25,6 +25,9 @@ const mutations = {
     SET_USER: (state, user) => {
         state.user.firstname = user.firstname;
         state.user.lastname = user.lastname;
+        state.user.description = user.description;
+        state.user.job = user.job;
+        state.user.avatarURL = user.avatarURL;
     }
 };
 
