@@ -1,7 +1,6 @@
 <template>
-<body class="body-post">
     <div class="post h-full w-full bg-gray-50 flex items-center justify-center card-body">
-        <div class="border max-w-screen-md bg-white mt-6 rounded-2xl p-4 card">
+        <div class="border bg-white mt-6 rounded-2xl p-4 card">
             <div class="flex items-center	justify-between">
                 <div class="gap-3.5	flex items-center ">
                     <img src="https://images.unsplash.com/photo-1617077644557-64be144aa306?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="object-cover bg-yellow-500 rounded-full w-10 h-10" />
@@ -30,11 +29,7 @@
                         </span>
                         <div class="text-sm	text-style text-style">10 Comments</div>
                     </div>
-                    <div class="flex items-center	gap-3">
-                        <span class="material-icons-outlined icon-style">
-                            favorite
-                        </span>
-                        <div class="text-sm text-style text-style">5 Likes</div>
+                    <div class="flex items-center	gap-3">card_body
                         <span class="material-icons-outlined icon-style">
                             favorite_border
                         </span>
@@ -56,7 +51,6 @@
             </div>
         </div>
     </div>
-</body>
 </template>
 
 <script>

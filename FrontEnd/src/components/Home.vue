@@ -1,14 +1,14 @@
 <template>
-<body class="page">
-    <div>
+    <div class="page">
         <gmn-header v-bind:header_index="0"></gmn-header>  
-        <div class="home_main">
-            <div class="aside"><gmn-main></gmn-main></div>
-            <div class="content"><gmn-posts></gmn-posts></div>
+        <div class="grid_container">
+            <div class="home_main">
+                <div class="aside"><gmn-main></gmn-main></div>
+                <div class="content"><gmn-posts></gmn-posts></div>
+            </div>
         </div>
         <gmn-footer></gmn-footer>
     </div>
-</body>
 </template>
 <script>
 import GmnHeader from '@/components/GmnHeader';

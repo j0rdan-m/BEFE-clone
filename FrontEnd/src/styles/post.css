@@ -8,6 +8,18 @@
   color: #243b55;
 }
 
+.interactions {
+  padding: 5px;
+}
+
+.interactions .text-style {
+  color: white;
+}
+
+.interactions .icon-style {
+  color: white;
+}
+
 .body-post {
   margin: 0;
   padding: 0;
@@ -17,31 +29,18 @@
   overflow: hidden;
 }
 
-.body-post :hover .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#243b55));
-  background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
-  border: white;
-}
-
-.body-post :hover .text-style {
-  color: white;
-}
-
-.body-post :hover .icon-style {
-  color: white;
-}
-
 .post {
   background-color: rgba(0, 0, 0, 0);
   border: #243b55;
 }
 
 .card {
-  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(white), to(#243b55));
+  background: linear-gradient(white, white, #243b55);
 }
 
-.card :hover {
-  border: #243b55;
+.card:hover {
+  border: #243b55 solid 1px;
 }
 
 .edit-button {
