@@ -56,6 +56,6 @@ export default new Router({
             name: 'GmnPostPage',
             beforeEnter: ifAuthenticated,
             component: GmnPostPage
-        },
+        }
     ]
 });

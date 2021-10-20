@@ -74,6 +74,7 @@ export default {
             Axios.post('http://localhost:3000/api/auth/login', auth)
                 .then(response => {
                     sessionStorage.setItem('token', response.data.token);
+                    sessionStorage.setItem('userId',response.data.userId);
                     window.location.href= "/";
                 }
                 )
@@ -87,7 +88,7 @@ export default {
             event.stopPropagation();
             event.preventDefault(); 
             console.log("subscribe for " + this.futur_user_firstname);   
-            const auth = { email: this.futur_user_email, password: this.futur_user_password };
+            const auth = { email: this.futur_user_email, password: this.futur_user_password, firstname: this.futur_user_firstname, lastname: this.futur_user_lastname };
             Axios.post('http://localhost:3000/api/auth/signup', auth)
                 .then(response => {
                     this.user_email = this.futur_user_email;
