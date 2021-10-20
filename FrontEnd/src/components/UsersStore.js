@@ -6,9 +6,9 @@ Vue.use(Vuex);
 
 const state = {
     user: {
-        firstname: "Antonio",
-        lastname: "Alexandre",
-        job: "Front End developer",
+        firstname: "",
+        lastname: "",
+        description: "",
         following: 34,
         followers: 155,
         sauces: []
@@ -21,6 +21,10 @@ const mutations = {
     },
     SET_SAUCES: (state, sauces) => {
         state.user.sauces = sauces;
+    },
+    SET_USER: (state, user) => {
+        state.user.firstname = user.firstname;
+        state.user.lastname = user.lastname;
     }
 };
 
@@ -41,8 +45,12 @@ const actions = {
                 commit('SET_SAUCES', response.data); 
             });
     },
-
-
+    setUser({ commit }) {
+        axios.get('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'))
+            .then(response => {
+                commit('SET_USER', response.data);
+            });
+    }
 };
 
 let store =  new Vuex.Store({

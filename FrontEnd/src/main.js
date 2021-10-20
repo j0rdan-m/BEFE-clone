@@ -16,5 +16,13 @@ new Vue({
     store,
     router,
     components: { App },
-    template: '<App/>'
+    template: '<App/>',
+    computed: {
+        ...Vuex.mapActions([
+            'setUser'
+        ])
+    },
+    mounted(){
+        this.setUser;
+    }
 });
