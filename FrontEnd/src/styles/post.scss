@@ -9,24 +9,21 @@
     color: #243b55;
 }
 
+.interactions{
+    padding: 5px;
+    .text-style{
+        color: white;
+    }
+    .icon-style{
+        color: white;
+    }
+}
+
 .body-post{
     margin: 0;
     padding: 0;
     display: flex;
     overflow: hidden;
-    // background: linear-gradient(rgba(0, 0, 0, 0), white);
-    :hover{
-        .card{
-            background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
-            border: white;
-        }
-        .text-style{
-            color: white;
-        }
-        .icon-style{
-            color: white;
-        }
-    }
 }
 
 .post{
@@ -37,9 +34,9 @@
 }
 
 .card{
-    background: white;
-    :hover{
-        border:#243b55;
+    background: linear-gradient(white, white, #243b55);
+    &:hover{
+        border:#243b55 solid 1px;
     }
     
 

@@ -42,6 +42,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
     footer{
+        margin-top: auto;
         margin: 0;
         background: linear-gradient(rgba(0,0,0,0), #243b55);
     }

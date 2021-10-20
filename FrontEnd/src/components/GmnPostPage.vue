@@ -38,5 +38,7 @@ export default {
 };
 </script>
 <style>
-    
+    .main_postpage{
+        min-height: 39vh;
+    }
 </style>
