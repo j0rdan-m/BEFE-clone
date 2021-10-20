@@ -1,176 +1,87 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto");
-body {
-  background: -webkit-gradient(linear, left top, right top, from(#3FB6A8), to(#7ED386));
-  background: linear-gradient(to right, #3FB6A8, #7ED386);
+.settings-body {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.container {
+.settings-card {
+  -ms-flex-line-pack: center;
+      align-content: center;
   background: #FFFFFF;
-  width: 540px;
-  height: 420px;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 10%;
-  -webkit-box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
-          box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
-}
-
-.logo {
-  float: right;
-  margin-right: 12px;
-  margin-top: 12px;
-  color: #3DBB3D;
-  font-weight: 900;
-  font-size: 1.5em;
-  letter-spacing: 1px;
-}
-
-.CTA {
-  width: 80px;
-  height: 40px;
-  right: -20px;
-  bottom: 0;
-  margin-bottom: 90px;
-  position: absolute;
-  z-index: 1;
-  background: #7ED386;
-  font-size: 1em;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  cursor: pointer;
-}
-
-.CTA h1 {
-  color: #FFFFFF;
-  margin-top: 10px;
-  margin-left: 9px;
-}
-
-.CTA:hover {
-  background: #3FB6A8;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.leftbox {
-  float: left;
-  top: -5%;
-  left: 5%;
-  position: absolute;
-  width: 15%;
-  height: 110%;
-  background: #7ED386;
-  -webkit-box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
-          box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
-}
-
-nav a {
-  list-style: none;
-  padding: 35px;
-  color: #FFFFFF;
-  font-size: 1.1em;
-  display: block;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-nav a:hover {
-  color: #3FB6A8;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  cursor: pointer;
-}
-
-nav a:first-child {
-  margin-top: 7px;
-}
-
-.active {
-  color: #3FB6A8;
-}
-
-.rightbox {
-  float: right;
-  width: 60%;
+  width: 75%;
   height: 100%;
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 5px 20px rgba(36, 59, 85, 0.5);
+          box-shadow: 2px 5px 20px rgba(36, 59, 85, 0.5);
+  border: 1px solid #243b55;
 }
 
-.profile, .payment, .subscription, .privacy, .settings {
+.profile {
   -webkit-transition: opacity .5s ease-in;
   transition: opacity .5s ease-in;
-  position: absolute;
-  width: 70%;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  color: #7ED386;
-  font-size: 1em;
+  color: #243b55;
+  font-size: 35px;
+  font-weight: bolder;
   margin-top: 40px;
   margin-bottom: 35px;
 }
 
 h2 {
-  color: #777777;
-  font-family: "Roboto", sans-serif;
-  width: 80%;
+  color: #243b55;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
   text-transform: uppercase;
-  font-size: 8px;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: 10px;
   margin-left: 2px;
 }
 
 p {
   border-width: 1px;
   border-style: solid;
-  -o-border-image: linear-gradient(to right, #3FB6A8, rgba(126, 211, 134, 0.5)) 1 0%;
-     border-image: -webkit-gradient(linear, left top, right top, from(#3FB6A8), to(rgba(126, 211, 134, 0.5))) 1 0%;
-     border-image: linear-gradient(to right, #3FB6A8, rgba(126, 211, 134, 0.5)) 1 0%;
+  -o-border-image: rgba(0, 0, 0, 0);
+     border-image: rgba(0, 0, 0, 0);
+  -o-border-image: #243b55;
+     border-image: #243b55;
   border-top: 0;
-  width: 80%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
-  font-size: .7em;
+  font-size: 1em;
   padding: 7px 0;
-  color: #070707;
-}
-
-span {
-  font-size: .5em;
-  color: #777777;
+  color: #243b55;
 }
 
 .btn {
-  float: right;
-  font-family: "Roboto", sans-serif;
+  border-radius: 20px;
+  border: 1px solid #243b55;
+  background-color: #243b55;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 10px;
-  border: none;
-  color: #3FB6A8;
+  -webkit-transition: -webkit-transform 80ms ease-in;
+  transition: -webkit-transform 80ms ease-in;
+  transition: transform 80ms ease-in;
+  transition: transform 80ms ease-in, -webkit-transform 80ms ease-in;
+  margin: 50px;
 }
 
 .btn:hover {
-  text-decoration: underline;
-  font-weight: 900;
+  text-decoration: none;
+  font-weight: 1000;
 }
 
 input {
-  border: 1px solid #dddddd;
-  font-family: "Roboto", sans-serif;
-  padding: 2px;
-  margin: 0;
-}
-
-.privacy h2 {
-  margin-top: 25px;
-}
-
-.settings h2 {
-  margin-top: 25px;
-}
-
-.noshow {
-  opacity: 0;
+  background-color: #243b55;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
 }
 /*# sourceMappingURL=settings.css.map */

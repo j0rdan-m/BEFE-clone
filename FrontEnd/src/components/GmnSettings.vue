@@ -3,31 +3,46 @@
     <!-- Start of Header -->
     <gmn-header v-bind:header_index="3"></gmn-header>
     <!-- End of Header -->
-    <div class="container">
 
-        <div class="rightbox">
-            <div class="profile">
-                <h1>Personal Info</h1>
-                <h2>Full Name</h2>
-                <p>Julie Park <button class="btn">update</button></p>
-                <h2>Birthday</h2>
-                <p>July 21</p>
-                <h2>Gender</h2>
-                <p>Female</p>
-                <h2>Email</h2>
-                <p>example@example.com <button class="btn">update</button></p>
-                <h2>Password </h2>
-                <p>••••••• <button class="btn">Change</button></p>
-            </div>
-        </div>    
-    </div>
+    <div class="settings-card">
+        <div class="profile">
+            <h1>Personal Info</h1>
+            <h2>First Name</h2>
+            <p>
+                {{ user_firstname }}
+                <br>
+                <input v-model="futur_user_firstname" type="text" placeholder="First Name"/></p>            
+            <h2>Last Name</h2>
+            <p>
+                {{ user_lastname }}
+                <br>
+                <input v-model="futur_user_lastname" type="text" placeholder="First Name" />
+            </p> 
+            <h2>Birthday</h2>
+            <p>July 21</p>
+            <h2>Email</h2>
+            <p>{{ user_email }}</p>
+            <h2>Password </h2>
+            <p><input v-model="futur_user_password" type="text" placeholder="•••••••" /></p>
+            <p><button class="btn">update</button></p>
+        </div>
+        
+    </div>    
+    
+    <gmn-footer></gmn-footer>
 </div>
 </template>
 
 <script>
 import GmnHeader from './GmnHeader.vue';
+import GmnFooter from '@/components/GmnFooter';
+import vuex from 'vuex';
 export default {
-    components: { GmnHeader },
+    components: { 
+        GmnHeader, 
+        GmnFooter},
+    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email', 'user_password'])}
+    
 
 };
 </script>
