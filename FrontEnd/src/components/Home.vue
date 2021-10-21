@@ -7,6 +7,7 @@
                 <div class="content"><gmn-posts></gmn-posts></div>
             </div>
         </div>
+        <scrollup></scrollup>
         <gmn-footer></gmn-footer>
     </div>
 </template>
@@ -15,13 +16,15 @@ import GmnHeader from '@/components/GmnHeader';
 import GmnMain from '@/components/GmnMain';
 import GmnPosts from '@/components/GmnPosts';
 import GmnFooter from '@/components/GmnFooter';
+import Scrollup from '@/components/Scrollup';
 
 export default {
     components:{
         GmnHeader,
         GmnMain,
         GmnPosts,
-        GmnFooter
+        GmnFooter,
+        Scrollup
     }
 };
 </script>
