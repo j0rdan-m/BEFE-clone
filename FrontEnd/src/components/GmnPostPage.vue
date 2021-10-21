@@ -41,46 +41,6 @@ export default {
 };
 </script>
 <style>
-    .main_postpage{
-        min-height: 39vh;
-        
-    }
-    .create-card{
-        /* background: linear-gradient(white, white, #243b55); */
-        background: white;
-        border-radius: 10px;
-    }
-    .btn{
-        border-radius: 20px;
-        border: 1px solid #243b55;
-        background-color: #243b55;
-        color: #FFFFFF;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px 45px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        transition: transform 80ms ease-in;
-    }
-    .text-style{
-        font-family: 'Montserrat', sans-serif;
-        color: #243b55;
-        
-    }
-    textarea{
-        min-block-size: 250px;
-        background: #243b55;
-        color: white;
-        border: none;
-        /* padding: 12px 15px;
-        margin: 8px 0; */
-    }
-    input {
-        background: #243b55;
-        color: white;
-        border: none;
-        /* padding: 12px 15px;
-        margin: 8px 0; */
-    }
+    @import url('../styles/post-page.css');
 
 </style>

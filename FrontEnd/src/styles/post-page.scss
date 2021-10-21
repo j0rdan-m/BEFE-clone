@@ -1,0 +1,60 @@
+@import "../styles/responsive.scss";
+
+.main_postpage{
+    min-height: 39vh;
+}
+.create-card{
+    /* background: linear-gradient(white, white, #243b55); */
+    background: white;
+    border-radius: 10px;
+    
+    @include mobile-view-down{
+        min-width: 300px;
+    }
+}
+.btn{
+    border-radius: 20px;
+    border: 1px solid #243b55;
+    background-color: #243b55;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+
+    @include mobile-view-down{
+        max-width: 120px;
+        padding: 12px;
+    }
+}
+.text-style{
+    font-family: 'Montserrat', sans-serif;
+    color: #243b55;
+    @include tablet-view-down{
+        text-align: center;
+    }
+    
+}
+textarea{
+    min-block-size: 250px;
+    background: #243b55;
+    color: white;
+    border: none;
+    /* padding: 12px 15px;
+    margin: 8px 0; */
+    @include tablet-view-down{
+        min-block-size: 350px;
+        @include mobile-view-down{
+            min-block-size: 500px;
+        }
+      }
+}
+input {
+    background: #243b55;
+    color: white;
+    border: none;
+    /* padding: 12px 15px;
+    margin: 8px 0; */
+}

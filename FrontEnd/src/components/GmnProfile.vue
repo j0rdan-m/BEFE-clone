@@ -22,19 +22,19 @@
                 
         <div class="infos rounded-2xl shadow-lg">
             <div class="bg-white p-4 w-96 rounded-md">
-                <h1 class="text-lg font-bold text-gray-500">Job</h1>        
+                <h1 class="text-lg font-bold">Job</h1>        
                     <input id="jobValue" class="flex-grow outline-none" :value="user_job" type="text" placeholder="New job..." />
             </div>
             <div class="bg-white p-4 w-96 rounded-md">
-                <h1 class="text-lg font-bold text-gray-500">Description</h1>
+                <h1 class="text-lg font-bold">Description</h1>
                     <input id="descriptionValue" class="flex-grow outline-none" :value="user_description" type="text" placeholder="New description..." />
             </div>
-            <p><button class="btn" @click="update">update</button></p>
+            <p><button class="btn" @click="update">Update</button></p>
         </div>
         <div class="modal">
             <div class="avatar_link rounded-2xl shadow-lg">
                 <input id="avatarValue" class="flex-grow outline-none" type="text" placeholder="Copy link here..." />
-                <p><button class="btn" @click="updateAvatar">update</button></p>
+                <p><button class="btn" @click="updateAvatar">Update</button></p>
                 <i class="material-icons-outlined close-btn" @click="close_modal">
                     close
                 </i>

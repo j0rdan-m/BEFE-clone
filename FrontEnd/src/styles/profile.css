@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat");
 .main_profile {
   width: 100%;
   min-height: 50vh;
@@ -22,7 +23,7 @@
   width: 300px;
   min-height: 100px;
   opacity: 70%;
-  background-color: purple;
+  background-color: #243b55;
   overflow: hidden;
   padding: 5px;
   display: -webkit-box;
@@ -70,12 +71,20 @@
 }
 
 .firstname {
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
+  color: #243b55;
+  font-weight: bolder;
+  letter-spacing: 5px;
 }
 
 .lastname {
+  font-family: "Montserrat", sans-serif;
   font-size: 50px;
   padding-left: 20px;
+  color: #243b55;
+  font-weight: bolder;
+  letter-spacing: 5px;
 }
 
 .infos {
@@ -95,17 +104,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-p {
-  border-style: solid;
-  -o-border-image: rgba(0, 0, 0, 0);
-     border-image: rgba(0, 0, 0, 0);
-  -o-border-image: #243b55;
-     border-image: #243b55;
-  width: 100%;
-  font-size: 1em;
-  color: #243b55;
 }
 
 .modal {
@@ -146,6 +144,29 @@ p {
 .avatar_link input {
   min-width: 600px;
   width: 100%;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #243b55;
+  font-size: 35px;
+  font-weight: bolder;
+  letter-spacing: 10px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #243b55;
+  border-left: 0;
+  border-right: 0;
+}
+
+p {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  padding: 7px 0;
+  color: #243b55;
 }
 
 .btn {
