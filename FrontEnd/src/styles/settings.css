@@ -13,6 +13,7 @@
   -webkit-box-shadow: 2px 5px 20px rgba(36, 59, 85, 0.5);
           box-shadow: 2px 5px 20px rgba(36, 59, 85, 0.5);
   border: 1px solid #243b55;
+  border-radius: 10px;
 }
 
 .profile {
@@ -43,11 +44,11 @@ h2 {
 p {
   border-width: 1px;
   border-style: solid;
-  -o-border-image: rgba(0, 0, 0, 0);
-     border-image: rgba(0, 0, 0, 0);
   -o-border-image: #243b55;
      border-image: #243b55;
   border-top: 0;
+  border-left: 0;
+  border-right: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;

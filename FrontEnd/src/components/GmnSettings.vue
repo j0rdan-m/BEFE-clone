@@ -9,17 +9,11 @@
             <h1>Personal Info</h1>
             <h2>First Name</h2>
             <p>
-                {{ user_firstname }}
-                <br>
-                <input v-model="futur_user_firstname" type="text" placeholder="First Name"/></p>            
+                <input v-model="futur_user_firstname" type="text" placeholder="Super"/></p>            
             <h2>Last Name</h2>
             <p>
-                {{ user_lastname }}
-                <br>
-                <input v-model="futur_user_lastname" type="text" placeholder="First Name" />
+                <input v-model="futur_user_lastname" type="text" placeholder="Admin" />
             </p> 
-            <h2>Birthday</h2>
-            <p>July 21</p>
             <h2>Email</h2>
             <p>{{ user_email }}</p>
             <h2>Password </h2>

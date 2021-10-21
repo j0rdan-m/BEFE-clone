@@ -21,7 +21,7 @@ export default {
                 if (window.pageYOffset === 0) {
                     clearInterval(this.intervalId);
                 }
-                window.scroll(0, window.pageYOffset - 50);
+                window.scroll(0, window.pageYOffset - 100);
             }, 20);
         },
         scrollListener: function (e) {
@@ -39,15 +39,16 @@ export default {
 
 <style scoped>
     .bottom-right {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0);
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0);
     }
     .arrow-icon{
         color: white;
         font-size: 50px;
+        text-shadow: 0 0 15px black;
     }
 </style>
 

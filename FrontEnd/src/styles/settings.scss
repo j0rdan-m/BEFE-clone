@@ -20,20 +20,19 @@ $body: 'Roboto', sans-serif;
 
 .settings-card {
   align-content: center;
-  // width: 60%;
-  // height: 100%;
   background: $white;
   width: 75%;
   height: 100%;
   margin: 0 auto;
-  // margin-top: 10%;
   box-shadow: 2px 5px 20px rgba(#243b55, .5);
   border: 1px solid #243b55;
+  border-radius: 10px;
 }
 
 
 .profile{
   transition: opacity .5s ease-in;
+  
 }
 
 h1 {
@@ -59,9 +58,11 @@ h2 {
 p {
   border-width: 1px;
   border-style: solid;
-  border-image: rgba(0, 0, 0, 0);
+  // border-image: rgba(0, 0, 0, 0);
   border-image: #243b55;
   border-top: 0;
+  border-left: 0;
+  border-right: 0;
   width: 100%;
   font-family: $heading;
   font-size: 1em;
