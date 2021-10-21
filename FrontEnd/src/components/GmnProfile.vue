@@ -22,20 +22,14 @@
                 
         <div class="infos rounded-2xl shadow-lg">
             <div class="bg-white p-4 w-96 rounded-md">
-                <h1 class="text-lg font-bold text-gray-500">Job</h1>
-                {{ user_job }}
-                <div class="mt-5 mb-2 border-2 py-1 px-3 flex justify-between rounde-md rounded-md">
-                     
-                    <input class="flex-grow outline-none text-gray-600 focus:text-blue-600" type="text" placeholder="New job..." />
-                </div>
+                <h1 class="text-lg font-bold text-gray-500">Job</h1>        
+                    <input id="jobValue" class="flex-grow outline-none" :value="user_job" type="text" placeholder="New job..." />
             </div>
             <div class="bg-white p-4 w-96 rounded-md">
                 <h1 class="text-lg font-bold text-gray-500">Description</h1>
-                {{ user_description }}
-                <div class="mt-5 mb-2 border-2 py-1 px-3 flex justify-between rounde-md rounded-md">
-                    <input class="flex-grow outline-none text-gray-600 focus:text-blue-600" type="text" placeholder="New description..." />
-                </div>
+                    <input id="descriptionValue" class="flex-grow outline-none" :value="user_description" type="text" placeholder="New description..." />
             </div>
+            <p><button class="btn" @click="update">update</button></p>
         </div>
     </div>
     <gmn-footer></gmn-footer>
@@ -44,23 +38,30 @@
 
 <script>
 import GmnHeader from '@/components/GmnHeader';
-import vuex from 'vuex';
+import vuex, { mapActions } from 'vuex';
 import GmnFooter from '@/components/GmnFooter';
-import VueX from 'vuex';
 
 export default {
     components: { GmnHeader, GmnFooter },
     computed: {
-        ...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_job', 'user_description','user_avatarURL']),
-    }
+        ...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_job','user_avatarURL', 'user_description'])
+    },
+    methods: {
+        update () {
+            let $jobValue = document.querySelector("#jobValue").value;
+            let $descriptionValue = document.querySelector("#descriptionValue").value;
 
+            this.updateUser({job: $jobValue, description: $descriptionValue});
+        },
+        ...mapActions(['updateUser'])
+    }
     
 };
 </script>
 
 <style>
     @import url('../styles/profile.css');
-    .main_profile{
+ .main_profile{
         width: 100%;
         min-height: 50vh;
 
@@ -120,4 +121,42 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-</style>boss
+    p {
+  border-width: 1px;
+  border-style: solid;
+  border-image: rgba(0, 0, 0, 0);
+  border-image: #243b55;
+  border-top: 0;
+  width: 100%;
+  font-size: 1em;
+  padding: 7px 0;
+  color: #243b55;
+}
+
+.btn {
+	border-radius: 20px;
+	border: 1px solid #243b55;
+	background-color: #243b55;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  margin: 50px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  font-weight: 1000;
+}   
+input {
+	background-color: #243b55;
+    color: white;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+}
+
+</style>

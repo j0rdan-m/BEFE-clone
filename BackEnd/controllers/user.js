@@ -71,11 +71,21 @@ exports.update = (req, res, next) => {
         _id: req.params.id
       }).then(
         (user) => {
+          if(req.body.firstname){
             user.firstname = req.body.firstname;
+          }
+          if(req.body.lastname){
             user.lastname = req.body.lastname;
+          }
+          if(req.body.description){
             user.description = req.body.description;
+          }
+          if(req.body.job){
             user.job = req.body.job;
+          }
+          if(req.body.avatarUrl){
             user.avatarUrl = req.body.avatarUrl;
+          }
             user.save().then(
               () => {
                 res.status(201).json({

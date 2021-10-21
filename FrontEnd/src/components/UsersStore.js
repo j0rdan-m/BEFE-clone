@@ -9,6 +9,8 @@ const state = {
         firstname: "",
         lastname: "",
         description: "",
+        job:"",
+        avatarURL:"",
         following: 34,
         followers: 155,
         sauces: []
@@ -54,6 +56,14 @@ const actions = {
         axios.get('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'))
             .then(response => {
                 commit('SET_USER', response.data);
+            });
+    },
+    updateUser({ state }, user) {
+        axios.put('http://localhost:3000/api/auth/update/' + sessionStorage.getItem('userId'), user)
+            .then(response => {
+                if(response.status===201){
+                    window.location.href = "/";
+                }
             });
     }
 };
