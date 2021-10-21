@@ -7,7 +7,7 @@
             <div class="lastname">{{ user_lastname }}</div>    
         </div>
         <div class="img_mgt">
-            <button class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded add_btn">
+            <button class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded add_btn" @click="open_modal">
                 <i class="material-icons-outlined">
                     add_circle
                 </i>
@@ -31,6 +31,15 @@
             </div>
             <p><button class="btn" @click="update">update</button></p>
         </div>
+        <div class="modal">
+            <div class="avatar_link rounded-2xl shadow-lg">
+                <input id="avatarValue" class="flex-grow outline-none" type="text" placeholder="Copy link here..." />
+                <p><button class="btn" @click="updateAvatar">update</button></p>
+                <i class="material-icons-outlined close-btn" @click="close_modal">
+                    close
+                </i>
+            </div>
+        </div>
     </div>
     <gmn-footer></gmn-footer>
 </div>
@@ -38,7 +47,7 @@
 
 <script>
 import GmnHeader from '@/components/GmnHeader';
-import vuex, { mapActions } from 'vuex';
+import vuex from 'vuex';
 import GmnFooter from '@/components/GmnFooter';
 
 export default {
@@ -53,7 +62,20 @@ export default {
 
             this.updateUser({job: $jobValue, description: $descriptionValue});
         },
-        ...mapActions(['updateUser'])
+        updateAvatar () {
+            let $avatarValue = document.querySelector("#avatarValue").value;
+
+            this.updateUserAvatar({avatarURL: $avatarValue});
+        },
+        open_modal () {
+            let nodeModal = document.querySelector(".modal");
+            nodeModal.style.display="flex";
+        },
+        close_modal () {
+            let nodeModal = document.querySelector(".modal");
+            nodeModal.style.display="none";
+        },
+        ...vuex.mapActions(['updateUser','updateUserAvatar'])
     }
     
 };
@@ -74,7 +96,7 @@ export default {
     }
     .avatar{
         width: 300px;
-        height: 300px;
+        min-height: 100px;
         opacity: 70%;
         background-color: purple;
         overflow: hidden;
@@ -122,17 +144,43 @@ export default {
         align-items: center;
     }
     p {
-  border-width: 1px;
   border-style: solid;
   border-image: rgba(0, 0, 0, 0);
   border-image: #243b55;
-  border-top: 0;
   width: 100%;
   font-size: 1em;
-  padding: 7px 0;
   color: #243b55;
 }
+.modal{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.avatar_link{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    height: 100px;
+    min-width: 400px;
+    background-color: white;
+    border: purple solid 2px;
 
+    
+}
+.avatar_link > * {
+    margin:5px;
+}
+.avatar_link input {
+    min-width: 600px;
+    width: 100%;
+}
 .btn {
 	border-radius: 20px;
 	border: 1px solid #243b55;
@@ -144,7 +192,7 @@ export default {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
-  margin: 50px;
+
 }
 
 .btn:hover {
@@ -158,5 +206,8 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 }
-
+.close-btn{
+    cursor: pointer;
+    transform: translateX(15px) translateY(-30px);
+}
 </style>

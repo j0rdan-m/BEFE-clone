@@ -83,8 +83,8 @@ exports.update = (req, res, next) => {
           if(req.body.job){
             user.job = req.body.job;
           }
-          if(req.body.avatarUrl){
-            user.avatarUrl = req.body.avatarUrl;
+          if(req.body.avatarURL){
+            user.avatarURL = req.body.avatarURL;
           }
             user.save().then(
               () => {

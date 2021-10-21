@@ -65,6 +65,14 @@ const actions = {
                     window.location.href = "/";
                 }
             });
+    },
+    updateUserAvatar({ state }, user) {
+        axios.put('http://localhost:3000/api/auth/update/' + sessionStorage.getItem('userId'), user)
+            .then(response => {
+                if(response.status===201){
+                    window.location.href = "/";
+                }
+            });
     }
 };
 
