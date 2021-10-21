@@ -16,9 +16,30 @@
   border-radius: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .settings-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-width: 768px) {
+  .settings-card {
+    min-width: 300px;
+  }
+}
+
 .profile {
   -webkit-transition: opacity .5s ease-in;
   transition: opacity .5s ease-in;
+}
+
+#user-email {
+  font-family: "Montserrat", sans-serif;
+  color: #243b55;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  letter-spacing: 5px;
 }
 
 h1 {
@@ -28,6 +49,11 @@ h1 {
   font-weight: bolder;
   margin-top: 40px;
   margin-bottom: 35px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #243b55;
+  border-left: 0;
+  border-right: 0;
 }
 
 h2 {
@@ -42,13 +68,6 @@ h2 {
 }
 
 p {
-  border-width: 1px;
-  border-style: solid;
-  -o-border-image: #243b55;
-     border-image: #243b55;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
@@ -76,6 +95,10 @@ p {
 .btn:hover {
   text-decoration: none;
   font-weight: 1000;
+}
+
+.btn-delete:hover {
+  background-color: #e40a0a;
 }
 
 input {

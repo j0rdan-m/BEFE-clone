@@ -8,7 +8,7 @@
         <div class="profile">
             <h1>Personal Info</h1>
             <h2>Email</h2>
-            <p>{{ user_email }}</p>
+            <p id="user-email">{{ user_email }}</p>
             <h2>First Name</h2>
             <p>
                 <input id="future_firstname" :value="user_firstname" type="text" placeholder="Enter first name..."/></p>            
@@ -16,10 +16,12 @@
             <p>
                 <input id="future_lastname" :value="user_lastname" type="text" placeholder="Enter last name..." />
             </p> 
- 
+            <p><button class="btn" @click="updateName">Update</button></p>
+            <h1>Security</h1>
             <h2>Password</h2>
-            <p><input type="text" placeholder="•••••••" /></p>
-            <p><button class="btn" @click="updateName">update</button></p>
+            <p><input type="text" placeholder="•••••••" /> <button class="btn" @click="updateName">Change</button></p>
+            <h2>Delete Account</h2>
+            <p><button class="btn btn-delete">Delete</button></p>
         </div>
         
     </div>    
