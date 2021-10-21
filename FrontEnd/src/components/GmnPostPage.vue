@@ -48,6 +48,7 @@ export default {
     .create-card{
         /* background: linear-gradient(white, white, #243b55); */
         background: white;
+        border-radius: 10px;
     }
     .btn{
         border-radius: 20px;
@@ -68,5 +69,18 @@ export default {
     }
     textarea{
         min-block-size: 250px;
+        background: #243b55;
+        color: white;
+        border: none;
+        /* padding: 12px 15px;
+        margin: 8px 0; */
     }
+    input {
+        background: #243b55;
+        color: white;
+        border: none;
+        /* padding: 12px 15px;
+        margin: 8px 0; */
+    }
+
 </style>

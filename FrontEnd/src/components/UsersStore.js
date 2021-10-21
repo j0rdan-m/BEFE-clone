@@ -8,12 +8,14 @@ const state = {
     user: {
         firstname: "",
         lastname: "",
+        email: "",
         description: "",
         job:"",
         avatarURL:"",
-        following: 34,
-        followers: 155,
         sauces: []
+    },
+    content:{
+        posts: []
     }
 };
 
@@ -27,6 +29,7 @@ const mutations = {
     SET_USER: (state, user) => {
         state.user.firstname = user.firstname;
         state.user.lastname = user.lastname;
+        state.user.email = user.email;
         state.user.description = user.description;
         state.user.job = user.job;
         state.user.avatarURL = user.avatarURL;
@@ -36,6 +39,7 @@ const mutations = {
 const getters = {
     user_firstname: state => state.user.firstname,
     user_lastname: state => state.user.lastname,
+    user_email: state => state.user.email,
     user_description: state => state.user.description,
     user_job: state => state.user.job,
     sauces: state => state.user.sauces,
