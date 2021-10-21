@@ -31,7 +31,7 @@ app.use(hsts({
 
 
 //Internal modules
-const saucesRoutes = require('./routes/routes');
+const postsRoutes = require('./routes/post');
 const userRoutes =  require('./routes/user');
 
 
@@ -62,7 +62,7 @@ app.use(express.json());
 //app.use(bodyParser.json());
 
 app.use('/images', express.static(path.join(__dirname, 'images')))
-app.use('/api/sauces', saucesRoutes);
+app.use('/api/posts', postsRoutes);
 app.use('/api/auth', userRoutes);
 
 app.listen(3000, () => {

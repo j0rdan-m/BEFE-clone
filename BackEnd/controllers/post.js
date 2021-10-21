@@ -15,77 +15,20 @@ exports.getPosts = (req, res, next) => {
     );
   };
 
-exports.getSauce = (req, res, next) => {
-    Post.findOne({
-      _id: req.params.id
-    }).then(
-      (sauce) => {
-        res.status(200).json(sauce);
-      }
-    ).catch(
-      (error) => {
-        res.status(404).json({
-          error: error
-        });
-      }
-    );
-  };
-
-
-  exports.likeSauce = (req, res, next) => {
-    Post.findOne({_id: req.params.id}).then((sauce) => {
-          if (req.body.like == 1 && sauce.usersLiked.includes(req.body.userId) === false) {
-              sauce.usersLiked.push(req.body.userId)
-              if (sauce.likes){
-                sauce.likes += 1}
-              else {
-                sauce.likes = 1
-              }
-              console.log('Added user in userLiked')
-          } else if (req.body.like == 0 && sauce.usersLiked.includes(req.body.userId)) {
-              sauce.usersLiked.remove(req.body.userId)
-              sauce.likes -= 1
-          } else if (req.body.like == -1 && sauce.usersDisliked.includes(req.body.userId) === false) {
-              sauce.usersDisliked.push(req.body.userId)
-              if (sauce.dislikes){
-                sauce.dislikes += 1}
-              else {
-                sauce.dislikes = 1
-              }
-          } else if (req.body.like == 0 && sauce.usersDisliked.includes(req.body.userId)) {
-              sauce.usersDisliked.remove(req.body.userId)
-              sauce.dislikes -= 1
-          }         
-          sauce.save().then(
-              () => {
-                  res.status(201).json({
-                      message: "Sauce Like Updated!"
-                  });
-              }
-          ).catch(
-              (error) => {
-                  res.status(400).json({
-                      error: error
-                  });
-              }
-          );
-      });
-    };
-
-
 //POST
 
 exports.createPost = (req, res, next) => {
-  req.body.sauce = JSON.parse(req.body.sauce);
+
   //const url = req.protocol + '://' + req.get('host');
-  const sauce = new Sauce({
-    name: req.body.sauce.name,
-    description: req.body.sauce.description,
+  const post = new Post({
+    title: req.body.title,
+    description: req.body.description,
     //imageUrl: url + '/images/' + req.file.filename,
-    userId: req.body.sauce.userId,
-    
+    imageUrl: req.body.imageUrl,
+    userId: req.body.userId,
+    readerUsers: [req.body.userId]
   });
-  sauce.save().then(
+  post.save().then(
     () => {
       res.status(201).json({
         message: 'Post saved successfully!'
@@ -100,60 +43,57 @@ exports.createPost = (req, res, next) => {
   );
 };    
 
+//DELETE 
+exports.deletePost = (req, res, next) => {
+  Post.deleteOne({_id: req.params.id}).then(
+    () => {
+      res.status(200).json({
+        message: 'Deleted!'
+      });
+    }
+  ).catch(
+    (error) => {
+      res.status(400).json({
+        error: error
+      });
+    }
+  );
+};
 
-//PUT  
-  exports.putSauce = (req,res) => {
-    const url = req.protocol + '://' + req.get('host');
-    Post.findOne({
-      _id: req.params.id
-    }).then(
-      (sauce) => { 
-        console.log(req.body);
-        if(req.file){
-          sauce.imageUrl = url + '/images/' + req.file.filename
-          req.body = JSON.parse(req.body.sauce)
-          console.log(req.body);
-
-        }   
-        sauce.userId =req.body.userId
-        sauce.name =req.body.name
-        sauce.description =req.body.description
-        sauce.manufacturer =req.body.manufacturer
-        sauce.mainPepper =req.body.mainPepper
-        sauce.heat =req.body.heat
-     
-        sauce.save().then(
+//Update
+exports.update = (req, res, next) => {
+  Post.findOne({
+    _id: req.params.id
+  }).then(
+    (post) => {
+      if(req.body.title){
+        post.title = req.body.title;
+      }
+      if(req.body.description){
+        post.description = req.body.description;
+      }
+      if(req.body.imageUrl){
+        post.imageUrl = req.body.imageUrl;
+      }
+      if(req.body.readerUsers){
+        post.readerUsers = req.body.readerUsers;
+      }
+      post.save().then(
           () => {
             res.status(201).json({
-              message: 'Updated successfully!'
+              message: 'Post modified successfully!'
             });
           }
         ).catch(
           (error) => {
-            res.status(400).json({
+            res.status(500).json({
               error: error
             });
           }
         )
-    })
+        });
   };
 
-//DELETE 
-  exports.deleteSauce = (req, res, next) => {
-    Post.deleteOne({_id: req.params.id}).then(
-      () => {
-        res.status(200).json({
-          message: 'Deleted!'
-        });
-      }
-    ).catch(
-      (error) => {
-        res.status(400).json({
-          error: error
-        });
-      }
-    );
-  };
 
   exports.apiMsg = (req,res) => {
     res.status(200).json({
