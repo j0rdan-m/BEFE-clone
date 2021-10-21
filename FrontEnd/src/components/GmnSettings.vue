@@ -7,18 +7,19 @@
     <div class="settings-card">
         <div class="profile">
             <h1>Personal Info</h1>
-            <h2>First Name</h2>
-            <p>
-                <input v-model="futur_user_firstname" type="text" placeholder="Super"/></p>            
-            <h2>Last Name</h2>
-            <p>
-                <input v-model="futur_user_lastname" type="text" placeholder="Admin" />
-            </p> 
             <h2>Email</h2>
             <p>{{ user_email }}</p>
-            <h2>Password </h2>
-            <p><input v-model="futur_user_password" type="text" placeholder="•••••••" /></p>
-            <p><button class="btn">update</button></p>
+            <h2>First Name</h2>
+            <p>
+                <input id="future_firstname" :value="user_firstname" type="text" placeholder="Enter first name..."/></p>            
+            <h2>Last Name</h2>
+            <p>
+                <input id="future_lastname" :value="user_lastname" type="text" placeholder="Enter last name..." />
+            </p> 
+ 
+            <h2>Password</h2>
+            <p><input type="text" placeholder="•••••••" /></p>
+            <p><button class="btn" @click="updateName">update</button></p>
         </div>
         
     </div>    
@@ -35,7 +36,15 @@ export default {
     components: { 
         GmnHeader, 
         GmnFooter},
-    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email', 'user_password'])}
+    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email'])},
+    methods: {
+        updateName (){
+            let $futur_user_firstname = document.querySelector("#future_firstname").value; 
+            let $futur_user_lastname = document.querySelector("#future_lastname").value; 
+            this.updateUser({firstname: $futur_user_firstname, lastname: $futur_user_lastname});
+        },
+        ...vuex.mapActions(['updateUser'])
+    }
     
 
 };
