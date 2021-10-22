@@ -19,10 +19,14 @@ new Vue({
     template: '<App/>',
     computed: {
         ...Vuex.mapActions([
-            'setUser'
+            'setUser',
+            'getUsers',
+            'getPosts'
         ])
     },
     mounted(){
         this.setUser;
+        this.getUsers;
+        this.getPosts;
     }
 });

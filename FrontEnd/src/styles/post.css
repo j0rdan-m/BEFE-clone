@@ -49,4 +49,13 @@
   padding: 10px;
   background-color: rgba(0, 0, 0, 0);
 }
+
+#post-read :hover {
+  cursor: pointer;
+}
+
+#post-read :hover .icon-btn {
+  background: red;
+  border: 1px solid black;
+}
 /*# sourceMappingURL=post.css.map */

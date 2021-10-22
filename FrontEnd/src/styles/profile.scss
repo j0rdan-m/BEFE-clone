@@ -37,13 +37,14 @@ $heading: 'Montserrat', sans-serif;
 .avatar{
   width: 300px;
   min-height: 100px;
-  opacity: 70%;
+  // opacity: 70%;
   background-color: #243b55;
   overflow: hidden;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
   @include borderRadius;
   @include tablet-view-down{
     width: 100%;
@@ -63,7 +64,7 @@ $heading: 'Montserrat', sans-serif;
   width: 40px;
   height: 40px;
   transform: translateY(60px) translateX(20px);
-  z-index: 3;
+  z-index: 4;
   @include tablet-view-down{
     width: 70px;
     height: 70px;

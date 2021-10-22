@@ -11,12 +11,13 @@ const state = {
         email: "",
         description: "",
         job:"",
-        avatarURL:"",
-        sauces: []
+        avatarURL:""
     },
     content:{
-        posts: []
+        posts: [],
+        users: []
     }
+
 };
 
 const mutations = {
@@ -33,6 +34,12 @@ const mutations = {
         state.user.description = user.description;
         state.user.job = user.job;
         state.user.avatarURL = user.avatarURL;
+    },
+    GET_POSTS: (state, posts) => {
+        state.content.posts = posts;
+    },
+    GET_USERS: (state, users) => {
+        state.content.users = users;
     }
 };
 
@@ -46,7 +53,9 @@ const getters = {
     user_avatarURL: state => state.user.avatarURL,
     isAuthenticated: function () {
         return sessionStorage.getItem("token") ? true : false;
-    }
+    },
+    all_posts: state => state.content.posts,
+    all_users: state => state.content.users
 };
 
 const actions = {
@@ -84,6 +93,18 @@ const actions = {
                 if(response.status===201){
                     window.location.href = "/";
                 }
+            });
+    },
+    getPosts({ commit }) {
+        axios.get('http://localhost:3000/api/posts/')
+            .then(response => {
+                commit('GET_POSTS', response.data);
+            });
+    },
+    getUsers({ commit }) {
+        axios.get('http://localhost:3000/api/auth/')
+            .then(response => {
+                commit('GET_USERS', response.data);
             });
     }
 

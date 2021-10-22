@@ -1,18 +1,22 @@
 <template >
     <div class="posts">
-        <!-- <gmn-header></gmn-header> -->
-        <gmn-post></gmn-post>
-        <gmn-post></gmn-post>
+        <gmn-post v-for="post in all_posts" v-bind:post="post"></gmn-post>
+        
     </div>
 </template>
 <script>
 import GmnPost from '@/components/GmnPost';
+import vue from 'vue';
+import vuex from 'vuex';
+
 // import GmnHeader from './GmnHeader.vue';
 export default {
     name: 'GmnPosts',
     components:{
         GmnPost,
-        // GmnHeader
+    },
+    computed: {
+        ...vuex.mapGetters(['all_posts'])
     }
 };
 </script>

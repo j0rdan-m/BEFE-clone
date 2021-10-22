@@ -50,3 +50,13 @@
     background-color: rgba(0,0,0,0);
     // color: #243b55;
 }
+
+#post-read{
+    :hover{
+        cursor: pointer;
+        .icon-btn{
+            background: red;
+            border: 1px solid black;
+        }
+    }
+}
