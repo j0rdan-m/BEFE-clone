@@ -2,42 +2,44 @@
 <div class="post-page">
     <gmn-header v-bind:header_index="2"></gmn-header>
     <div class="main_profile">
-        <div class="name rounded-2xl shadow-lg">
-            <div class="firstname">{{ user_firstname }}</div>
-            <div class="lastname">{{ user_lastname }}</div>    
-        </div>
-        <div class="img_mgt">
-            <button class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded add_btn" @click="open_modal">
-                <i class="material-icons-outlined">
-                    add_circle
-                </i>
-            </button>
-            <div class="avatar rounded-2xl shadow-lg">
-                <div class="img_avatar rounded-2xl" >
-                    <img :src="user_avatarURL" alt="profile picture">
+            <div class="content">
+            <div class="name  shadow-lg">
+                <div class="firstname">{{ user_firstname }}</div>
+                <div class="lastname">{{ user_lastname }}</div>    
+            </div>
+            <div class="img_mgt">
+                <button class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded add_btn" @click="open_modal">
+                    <i class="material-icons-outlined">
+                        add_circle
+                    </i>
+                </button>
+                <div class="avatar  shadow-lg">
+                    <div class="img_avatar " >
+                        <img :src="user_avatarURL" alt="profile picture">
+                    </div>
                 </div>
-            </div>
 
-        </div>
-                
-        <div class="infos rounded-2xl shadow-lg">
-            <div class="bg-white p-4 w-96 rounded-md">
-                <h1 class="text-lg font-bold">Job</h1>        
-                    <input id="jobValue" class="flex-grow outline-none" :value="user_job" type="text" placeholder="New job..." />
             </div>
-            <div class="bg-white p-4 w-96 rounded-md">
-                <h1 class="text-lg font-bold">Description</h1>
-                    <input id="descriptionValue" class="flex-grow outline-none" :value="user_description" type="text" placeholder="New description..." />
+                    
+            <div class="infos shadow-lg">
+                <div class="bg-white p-4 w-96 rounded-md">
+                    <h1 class="text-lg font-bold">Job</h1>        
+                        <input id="jobValue" class="flex-grow outline-none" :value="user_job" type="text" placeholder="New job..." />
+                </div>
+                <div class="bg-white p-4 w-96 rounded-md">
+                    <h1 class="text-lg font-bold">Description</h1>
+                        <input id="descriptionValue" class="flex-grow outline-none" :value="user_description" type="text" placeholder="New description..." />
+                </div>
+                <p><button class="btn" @click="update">Update</button></p>
             </div>
-            <p><button class="btn" @click="update">Update</button></p>
-        </div>
-        <div class="modal">
-            <div class="avatar_link rounded-2xl shadow-lg">
-                <input id="avatarValue" class="flex-grow outline-none" type="text" placeholder="Copy link here..." />
-                <p><button class="btn" @click="updateAvatar">Update</button></p>
-                <i class="material-icons-outlined close-btn" @click="close_modal">
-                    close
-                </i>
+            <div class="modal">
+                <div class="avatar_link shadow-lg">
+                    <input id="avatarValue" class="flex-grow outline-none" type="text" placeholder="Copy link here..." />
+                    <p><button class="btn" @click="updateAvatar">Update</button></p>
+                    <i class="material-icons-outlined close-btn" @click="close_modal">
+                        close
+                    </i>
+                </div>
             </div>
         </div>
     </div>
