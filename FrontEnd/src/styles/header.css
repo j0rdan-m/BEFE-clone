@@ -48,6 +48,8 @@ html *::after {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--bgColorMenu);
+  -webkit-box-shadow: 2px 5px 20px rgba(29, 29, 39, 0.8);
+          box-shadow: 2px 5px 20px rgba(29, 29, 39, 0.8);
 }
 
 .menu__item {

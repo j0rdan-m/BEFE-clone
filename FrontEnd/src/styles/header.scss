@@ -40,6 +40,7 @@ html *::after {
     align-items: center;
     justify-content: center;
     background-color: var(--bgColorMenu);
+    box-shadow: 2px 5px 20px rgba(#1d1d27, .8);
 }
 
 .menu__item{
