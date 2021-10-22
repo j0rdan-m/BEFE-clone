@@ -77,7 +77,16 @@ const actions = {
                     window.location.href = "/";
                 }
             });
+    },
+    createPost({ state }, post) {
+        axios.post('http://localhost:3000/api/posts/', post)
+            .then(response => {
+                if(response.status===201){
+                    window.location.href = "/";
+                }
+            });
     }
+
 };
 
 let store =  new Vuex.Store({

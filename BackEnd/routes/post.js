@@ -15,7 +15,7 @@ router.get('/', postCtrl.getPosts);
 //router.get('/:id', postCtrl.getPosts);
 
 //POST
-router.post('/', auth, postCtrl.createPost);
+router.post('/', postCtrl.createPost);
 //router.post('/:id/like', auth, sauceCtrl.likeSauce);
 //router.post('/', auth, multer, sauceCtrl.createSauce);
 
