@@ -1,7 +1,6 @@
 <template >
     <div class="posts">
-        <gmn-post v-for="post in all_posts" v-bind:post="post"></gmn-post>
-        
+        <gmn-post v-for="post in all_posts" :key="post.id" v-bind:post="post"></gmn-post>
     </div>
 </template>
 <script>
