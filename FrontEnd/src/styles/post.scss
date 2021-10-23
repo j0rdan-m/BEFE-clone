@@ -24,12 +24,13 @@
     padding: 0;
     display: flex;
     overflow: hidden;
+    
 }
 
 .post{
     background-color: rgba(0,0,0,0);
     border: #243b55;
-
+    max-width: 70%;
 
 }
 
@@ -40,11 +41,16 @@
     &:hover{
         border:#243b55 solid 1px;
         box-shadow: 2px 5px 20px rgba(#1d1d27, 1);
-    }
-    
-
+    } 
 }
 
+img{
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 50%;
+    background-position: center;
+}
 
 .edit-button{
     width: 50px;
@@ -84,14 +90,14 @@ h1 {
     border-right: 0;
   }
 
-  h2 {
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bolder;
-    letter-spacing: 10px;
-    margin-left: 2px;
-  }
+//   h2 {
+//     width: 100%;
+//     text-transform: uppercase;
+//     font-size: 18px;
+//     font-weight: bolder;
+//     letter-spacing: 10px;
+//     margin-left: 2px;
+//   }
   
   p {
     width: 100%;

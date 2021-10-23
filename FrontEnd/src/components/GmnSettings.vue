@@ -21,7 +21,7 @@
             <h2>Password</h2>
             <p><input type="text" placeholder="•••••••" /> <button class="btn" @click="updateName">Change</button></p>
             <h2>Delete Account</h2>
-            <p><button class="btn btn-delete">Delete</button></p>
+            <p><button class="btn btn-delete" @click="deleteAccount">Delete</button></p>
         </div>
         
     </div>    
@@ -38,14 +38,17 @@ export default {
     components: { 
         GmnHeader, 
         GmnFooter},
-    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email'])},
+    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email', 'user__id'])},
     methods: {
         updateName (){
             let $futur_user_firstname = document.querySelector("#future_firstname").value; 
             let $futur_user_lastname = document.querySelector("#future_lastname").value; 
             this.updateUser({firstname: $futur_user_firstname, lastname: $futur_user_lastname});
         },
-        ...vuex.mapActions(['updateUser'])
+        deleteAccount (){
+            this.deleteUser('user__id');
+        },
+        ...vuex.mapActions(['updateUser', 'deleteUser'])
     }
     
 

@@ -32,6 +32,7 @@
 .post {
   background-color: rgba(0, 0, 0, 0);
   border: #243b55;
+  max-width: 70%;
 }
 
 .card {
@@ -44,6 +45,10 @@
   border: #243b55 solid 1px;
   -webkit-box-shadow: 2px 5px 20px #1d1d27;
           box-shadow: 2px 5px 20px #1d1d27;
+}
+
+img {
+  background-position: center;
 }
 
 .edit-button {
@@ -76,15 +81,6 @@ h1 {
   border-color: #243b55;
   border-left: 0;
   border-right: 0;
-}
-
-h2 {
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bolder;
-  letter-spacing: 10px;
-  margin-left: 2px;
 }
 
 p {

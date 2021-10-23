@@ -30,7 +30,7 @@
                     <h1 class="text-lg font-bold">Description</h1>
                         <input id="descriptionValue" class="flex-grow outline-none" :value="user_description" type="text" placeholder="New description..." />
                 </div>
-                <p><button class="btn" @click="update">Update</button></p>
+                <p><button class="btn btn-avatar" @click="update">Update</button></p>
             </div>
             <div class="modal">
                 <div class="avatar_link shadow-lg">

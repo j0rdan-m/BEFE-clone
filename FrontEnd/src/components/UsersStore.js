@@ -6,6 +6,7 @@ Vue.use(Vuex);
 
 const state = {
     user: {
+        _id: "",
         firstname: "",
         lastname: "",
         email: "",
@@ -40,6 +41,13 @@ const mutations = {
     },
     GET_USERS: (state, users) => {
         state.content.users = users;
+    },
+    GET_USER: (state, user) => {
+        state.content.user = user;
+    },
+    DELETE_USER: (state, user) => {
+        state.user._id = user._id;
+        
     }
 };
 
@@ -106,8 +114,20 @@ const actions = {
             .then(response => {
                 commit('GET_USERS', response.data);
             });
-    }
+    },
 
+    getUser({ commit }, user) {
+        axios.get('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'), user)
+            .then(response => {
+                commit('GET_USER', response.data);
+            });
+    },
+    deleteUser({ commit }, user) {
+        axios.delete('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'), user)
+            .then(response => {
+                console.log(response);
+            });
+    }
 };
 
 let store =  new Vuex.Store({
