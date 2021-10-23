@@ -74,10 +74,12 @@ const actions = {
             });
     },
     setUser({ commit }) {
-        axios.get('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'))
-            .then(response => {
-                commit('SET_USER', response.data);
-            });
+        if (sessionStorage.getItem('userId')){
+            axios.get('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'))
+                .then(response => {
+                    commit('SET_USER', response.data);
+                });
+        }
     },
     updateUser({ state }, user) {
         axios.put('http://localhost:3000/api/auth/update/' + sessionStorage.getItem('userId'), user)
@@ -122,10 +124,15 @@ const actions = {
                 commit('GET_USER', response.data);
             });
     },
-    deleteUser({ commit }, user) {
-        axios.delete('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'), user)
+    deleteUser() {
+        axios.delete('http://localhost:3000/api/auth/' + sessionStorage.getItem('userId'))
             .then(response => {
                 console.log(response);
+                if(response.status===201){
+                    sessionStorage.removeItem('userId');
+                    sessionStorage.removeItem('token');
+                    window.location.href = "/";
+                }
             });
     }
 };

@@ -143,3 +143,28 @@ exports.update = (req, res, next) => {
       }
     );
   };
+
+
+//DELETE
+exports.delete = (req, res, next) => {
+  User.findOneAndRemove({ _id: req.params.id }).then(
+    (user) => {
+      if (!user) {
+        return res.status(401).json({
+          message: 'User not found!'
+        });
+      }else{
+        return res.status(201).json({
+          message: 'User deleted!'
+        });
+      }
+    }
+  ).catch(
+    (error) => {
+      res.status(500).json({
+        error: error
+      });
+    }
+  );
+};
+

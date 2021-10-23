@@ -38,7 +38,9 @@ export default {
     components: { 
         GmnHeader, 
         GmnFooter},
-    computed: {...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email', 'user__id'])},
+    computed: {
+        ...vuex.mapGetters(['user_firstname', 'user_lastname', 'user_email'])
+    },
     methods: {
         updateName (){
             let $futur_user_firstname = document.querySelector("#future_firstname").value; 
@@ -46,7 +48,7 @@ export default {
             this.updateUser({firstname: $futur_user_firstname, lastname: $futur_user_lastname});
         },
         deleteAccount (){
-            this.deleteUser('user__id');
+            this.deleteUser();
         },
         ...vuex.mapActions(['updateUser', 'deleteUser'])
     }
