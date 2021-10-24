@@ -20,6 +20,7 @@
             <h1>Security</h1>
             <h2>Password</h2>
             <p><input type="text" placeholder="•••••••" /> <button class="btn" @click="updateName">Change</button></p>
+            <h1>Account</h1>
             <h2>Delete Account</h2>
             <p><button class="btn btn-delete" @click="deleteAccount">Delete</button></p>
         </div>

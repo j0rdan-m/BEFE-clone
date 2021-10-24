@@ -18,15 +18,15 @@
                 <h1>{{ post.title }}</h1>
 
             </div>
-            <div class="mt-5 flex gap-2	 justify-center border-b pb-4 flex-wrap	">
-                <img :src="post.imageUrl" class="bg-red-500 rounded-2xl w-1/3 object-cover h-96 flex-auto" alt="photo">
+            <div class="mt-5 flex gap-2	 justify-center pb-4 flex-wrap	post-img">
+                <img :src="post.imageUrl" class="rounded-2xl" alt="photo">
                 
             </div >
             <div class="whitespace-pre-wrap mt-7 text-style">
                 <p>{{ post.description }}</p>
             </div>
-            <div class="interactions rounded-2xl">
-                <div class=" h-16 border-b  flex items-center justify-around">
+            <div class="interactions">
+                <div class=" h-16 flex items-center justify-around">
                     <div class="flex items-center	gap-3	icon-btn">
                         <span class="material-icons-outlined icon-style">
                             chat_bubble_outline
