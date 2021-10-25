@@ -48,6 +48,13 @@ const mutations = {
     DELETE_USER: (state, user) => {
         state.user._id = user._id;
         
+    },
+    ADD_READERS: (state, ids) => {
+        state.content.posts.forEach(post => {
+            if (post._id === ids.post_id){
+                post.readerUsers.push(ids.userId);
+            }            
+        });
     }
 };
 
@@ -134,7 +141,24 @@ const actions = {
                     window.location.href = "/";
                 }
             });
-    }
+    },
+    updatePost({ state, commit }, ids) {
+        
+        commit('ADD_READERS', ids);
+        let postReaders = new Array();
+        state.content.posts.forEach(post => {
+            if (post._id === ids.post_id){
+                postReaders = post.readerUsers;
+            }            
+        });
+        let body = {"readerUsers": postReaders};
+        axios.put('http://localhost:3000/api/posts/update/' + ids.post_id, body)
+            .then(response => {
+                if(response.status===201){
+                    console.log('reader added');
+                }
+            });
+    },
 };
 
 let store =  new Vuex.Store({

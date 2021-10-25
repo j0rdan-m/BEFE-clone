@@ -62,18 +62,38 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-#post-read :hover {
-  cursor: pointer;
-  color: blue;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+#post-read {
+  border: 1px solid black;
+  color: white;
 }
 
-.icon-btn :hover {
+#post-read:hover {
+  color: #243b55;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+#post-read:hover .read_icon {
+  color: #243b55;
+}
+
+#post-read:hover .text_style {
+  color: #243b55;
+}
+
+.add-reader {
   cursor: pointer;
-  color: red;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+}
+
+#post-comments {
+  border: 1px solid black;
+}
+
+#post-comments :hover {
+  cursor: pointer;
+  color: #243b55;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 h1 {

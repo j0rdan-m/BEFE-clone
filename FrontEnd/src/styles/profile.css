@@ -13,7 +13,7 @@
       justify-content: space-around;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .main_profile .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -37,7 +37,7 @@
           flex-direction: column;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .img_mgt {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -71,13 +71,13 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .avatar {
     border-radius: 0px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .avatar {
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
@@ -89,13 +89,13 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .img_avatar {
     border-radius: 0px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .img_avatar {
     width: 80%;
     border: #243b55 solid 5px;
@@ -110,7 +110,7 @@
   z-index: 4;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .add_btn {
     width: 70px;
     height: 70px;
@@ -148,13 +148,13 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .name {
     border-radius: 0px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .name {
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
@@ -202,13 +202,13 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .infos {
     border-radius: 0px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .infos {
     width: 100%;
     -webkit-transform: translateX(0) translateY(0);
@@ -247,7 +247,7 @@
   border: purple solid 2px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .avatar_link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -268,7 +268,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .avatar_link input {
     min-width: 0;
     width: 90%;
@@ -333,7 +333,7 @@ input {
           transform: translateX(15px) translateY(-30px);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .close-btn {
     -webkit-transform: translateX(calc(45vw - 20px)) translateY(-147px);
             transform: translateX(calc(45vw - 20px)) translateY(-147px);

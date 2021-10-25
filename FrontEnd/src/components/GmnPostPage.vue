@@ -45,9 +45,6 @@ export default {
             image:""
         };
     },
-    computed: {
-        ...vuex.mapGetters(['post_title', 'post_description', 'post_imageUrl'])
-    },
     methods: {
         AddNewPost () {
             let $userIdValue = sessionStorage.getItem('userId');

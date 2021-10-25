@@ -42,7 +42,7 @@
   color: #243b55;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .text-style {
     text-align: center;
   }
@@ -57,21 +57,26 @@ textarea {
     margin: 8px 0; */
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   textarea {
     min-block-size: 350px;
   }
 }
 
-@media screen and (max-width: 1024px) and (max-width: 768px) {
+@media screen and (max-width: 1025px) and (max-width: 768px) {
   textarea {
     min-block-size: 500px;
   }
 }
 
+.icons :hover {
+  background: #243b55;
+  color: white;
+  border-color: #243b55;
+}
+
 .icons_active {
   display: none;
-  background-color: yellow;
 }
 
 .img-load {
@@ -110,7 +115,7 @@ textarea {
   width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   #imageValued {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

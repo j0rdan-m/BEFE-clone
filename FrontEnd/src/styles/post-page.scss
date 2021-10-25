@@ -52,16 +52,16 @@ textarea{
       }
 }
 
-// .icons{
-//     :active{
-//         // transition: width 2s, height 2s, background-color 2s, transform 2s;
-//         background-color: blue;        
-//     }
-// }
+.icons{
+    :hover{
+        background: #243b55;
+        color: white;    
+        border-color: #243b55;  
+    }
+}
 
 .icons_active{
     display: none;
-    background-color: yellow;
 }
 
 .img-load{
@@ -100,21 +100,4 @@ textarea{
         height: 150px;
     }
 
-    }
-// .image_link > * {
-//     margin:5px;
-    
-// }
-// .image_link input {
-//     visibility: 0;
-//     max-width: 40px;
-//     background-color: #243b55;
-//     color: white;
-//     border: none;
-//     padding: 12px 15px;
-//     margin: 8px 0;
-//     @include tablet-view-down{
-//         min-width: 0;
-//         width: 90%;
-//     }
-// }
+}

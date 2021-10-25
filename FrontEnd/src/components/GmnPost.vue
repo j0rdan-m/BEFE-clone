@@ -10,9 +10,23 @@
                         </time>
                     </div>
                 </div>
+                <!-- Remove Button -->
                 <div class="bg-gray-100	rounded-full h-3.5 flex	items-center justify-center edit-button">
                     <button><i class="material-icons-outlined">more_horiz</i></button>
                 </div>
+                <!-- <div id="app-cover">
+                    <input type="checkbox" id="checkbox">
+                    <div id="bin-icon">
+                        <div id="lid"></div>
+                        <div id="box">
+                        <div id="box-inner">
+                            <div id="bin-lines"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div id="layer"></div>
+                </div> -->
+                <!-- Remove Button End -->
             </div>
             <div class="whitespace-pre-wrap mt-7 text-style">
                 <h1>{{ post.title }}</h1>
@@ -27,17 +41,18 @@
             </div>
             <div class="interactions">
                 <div class=" h-16 flex items-center justify-around">
-                    <div class="flex items-center	gap-3	icon-btn">
+                    <div class="flex items-center	gap-3	icon-btn" id="post-comments">
                         <span class="material-icons-outlined icon-style">
                             chat_bubble_outline
                         </span>
-                        <div class="text-sm	text-style text-style">10 Comments</div>
+                        <div class="text-sm	text-style">10 Comments</div>
                     </div>
-                    <div class="flex items-center	gap-3 icon-btn" id="post-read">
-                        <span class="material-icons-outlined icon-style">
-                        bookmarks
+                    <div class="flex items-center gap-3 icon-btn add-reader" id="post-read" @click="post_read">
+                        <span class="material-icons-outlined read_icon">
+                        {{ getReadIcon }}
                         </span>
-                        <div class="text-sm text-style text-style">Read</div>
+
+                        <div class="text-sm textstyle">{{ getReadText }}</div>
                     </div>
                     
                 </div>
@@ -73,6 +88,41 @@ export default {
                 }
             });
             return writer;
+        },
+        getReadIcon () {
+            
+            if (this.isUserAPostReader()){
+                return "bookmark";
+            }
+            else{
+                return "bookmark_border";
+            }
+        },
+        getReadText () {
+            
+            if (this.isUserAPostReader()){
+                return "Read";
+            }
+            else{
+                return "Unread";
+            }
+        }
+    },
+    methods: {
+        ...Vuex.mapActions(
+            [
+                'updatePost'
+            ]
+        ),
+        isUserAPostReader: function () {
+            // document.querySelector('#post-read').classList.remove('add-reader');
+            // console.log(document.querySelector('#post-read').classList);
+            return this.post.readerUsers.includes(sessionStorage.getItem('userId'));
+        },
+        post_read: function (){
+            if (!this.isUserAPostReader()){
+                this.updatePost({post_id:this.post._id, userId:sessionStorage.getItem('userId')});
+            }
         }
     },
     props:[
@@ -82,6 +132,5 @@ export default {
 </script>
 
 <style>
-
     @import url('../styles/post.css');
 </style>
