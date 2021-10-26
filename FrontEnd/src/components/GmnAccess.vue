@@ -16,7 +16,6 @@
                     <h1>Sign in</h1>
                     <input v-model="user_email" type="email" placeholder="Email" />
                     <input v-model="user_password" type="password" placeholder="Password" />
-                    <a href="#">Forgot your password?</a>
                     <button @click="connect">Sign In</button>
                 </form>
             </div>

@@ -3,22 +3,21 @@
 
 #main{
     background-color: rgba(0, 0, 0, 0);
-    margin-top: -250px;
+    margin-top: -200px;
     // display: grid;
     // grid-template-rows: 1fr;
     // overflow: hidden;
 
 }
 
-#card{
+#card-user{
     background: linear-gradient(rgba(0, 0, 0, 0), #243b55);
-
+    // align-content: center;
+    // margin-right: 25%;
+    // margin-left: 25%;
 }
 
 #text{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    :hover{
-        color: black;
-    }
 }

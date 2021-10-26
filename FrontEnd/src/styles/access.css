@@ -47,13 +47,6 @@ span {
   font-size: 12px;
 }
 
-a {
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
-}
-
 button {
   border-radius: 20px;
   border: 1px solid #243b55;
@@ -130,6 +123,15 @@ input {
   transition: all 0.6s ease-in-out;
 }
 
+@media screen and (max-width: 1025px) {
+  .form-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+  }
+}
+
 .sign-in-container {
   left: 0;
   width: 50%;
@@ -139,6 +141,13 @@ input {
 .container.right-panel-active .sign-in-container {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+}
+
+@media screen and (max-width: 1025px) {
+  .container.right-panel-active .sign-in-container {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 
 .sign-up-container {
@@ -193,9 +202,25 @@ input {
   z-index: 100;
 }
 
+@media screen and (max-width: 1025px) {
+  .overlay-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+  }
+}
+
 .container.right-panel-active .overlay-container {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+@media screen and (max-width: 1025px) {
+  .container.right-panel-active .overlay-container {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 
 .overlay {
@@ -215,6 +240,15 @@ input {
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+}
+
+@media screen and (max-width: 1025px) {
+  .overlay {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+  }
 }
 
 .container.right-panel-active .overlay {

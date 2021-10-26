@@ -1,8 +1,18 @@
+@import "../styles/responsive.scss";
+
 .home_main{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     max-width: 2000px;
     width: 100%;
+    @include tablet-view-down{
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        // transform: translateX(0) translateY(0); 
+        // width: 100%;
+        // height: 100%;
+      }
 }
 .page{
     margin: 0;
@@ -16,11 +26,25 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
 }
-/* .aside{
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include tablet-view-down{
+        width: 100%;
+        margin-top: -300px;
+      }
+}
+.aside{
     display: grid;
     grid-row: initial;
-    overflow: hidden;
-    margin-top: -250px;
-    background-color: white;
-}; */
+    margin: 15px;
+    // background-color: white;
+    @include tablet-view-down{
+        width: 100%;
+      }
+};

@@ -5,6 +5,7 @@ import GmnAccess from '@/components/GmnAccess';
 import GmnProfile from '@/components/GmnProfile';
 import GmnPostPage from '@/components/GmnPostPage';
 import GmnSettings from '@/components/GmnSettings';
+import Gmn from '@/components/Gmn';
 import Sauces from '@/components/Sauces';
 import store from '@/components/UsersStore';
 
@@ -63,6 +64,11 @@ export default new Router({
             name: 'GmnSettings',
             beforeEnter: ifAuthenticated,
             component: GmnSettings
+        },
+        {
+            path: '/form',
+            name: 'Gmn',
+            component: Gmn
         }
     ]
 });
