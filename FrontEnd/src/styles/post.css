@@ -56,11 +56,6 @@
   overflow: hidden;
 }
 
-.card-body:hover .description {
-  color: white;
-  text-shadow: #243b55;
-}
-
 @media screen and (max-width: 1025px) {
   .card-body {
     display: -ms-grid;

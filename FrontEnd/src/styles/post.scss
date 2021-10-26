@@ -53,12 +53,7 @@
     // margin-left: 150px;
     justify-content: center;
     overflow: hidden;
-    &:hover{
-        .description{
-            color: white;
-            text-shadow: #243b55;
-        }
-    } 
+
     @include tablet-view-down{
         display: grid;
         grid-template-columns: 1fr;

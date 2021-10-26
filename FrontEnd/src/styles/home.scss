@@ -29,22 +29,25 @@ body {
     overflow: hidden;
 }
 
-.content{
+.posts{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    // align-items: center;
     
     @include tablet-view-down{
-        width: 100%;
-        margin-top: -300px;
+        // width: 100%;
+        // margin-top: -300px;
+        align-items: center;
       }
 }
 .aside{
     display: grid;
     grid-row: initial;
-    margin: 15px;
     // background-color: white;
     @include tablet-view-down{
-        width: 100%;
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 };
