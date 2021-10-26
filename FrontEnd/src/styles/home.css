@@ -61,11 +61,4 @@ body {
   display: grid;
   grid-row: initial;
 }
-
-@media screen and (max-width: 1025px) {
-  .aside {
-    height: 100%;
-    max-height: 400px;
-  }
-}
 /*# sourceMappingURL=home.css.map */
