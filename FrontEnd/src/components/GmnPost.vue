@@ -12,7 +12,7 @@
                 </div>
                 <!-- Remove Button -->
                 <div class="bg-gray-100	rounded-full h-3.5 flex	items-center justify-center edit-button">
-                    <button @click="deletePost">
+                    <button type="button" @click="deletePost">
                         <span class="material-icons-outlined">
                         {{ getDeleteIcon }}
                         </span>
@@ -120,7 +120,8 @@ export default {
                 this.updatePost({post_id:this.post._id, userId:sessionStorage.getItem('userId')});
             }
         },
-        deletePost: function (){
+        deletePost: function (event){
+            event.preventDefault(); 
             if (this.post.userId === sessionStorage.getItem('userId')){
                 axios.delete('http://localhost:3000/api/posts/' + this.post._id);
                 window.location.href="/";
